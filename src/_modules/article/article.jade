@@ -1,0 +1,10 @@
+include ../icon/icon
+
+mixin article(data, klass)
+  a(href=data.url).article(class=klass)
+    .article__image
+      img(src=data.image)
+    .article__content
+      .article__category=data.categoria
+      .article__date=data.fechas
+      .article__title=data.titulo

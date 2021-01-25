@@ -158,3 +158,30 @@
         }
     }
 }
+
+@mixin icon($size: 30px, $orientation: 'up') {
+    height: $size;
+    width: $size;
+    transform-origin: center;
+  
+    @if $orientation == up  {
+      transform: rotate(0);
+    }
+  
+    @if $orientation == right  {
+      transform: rotate(90deg);
+    }
+  
+    @if $orientation == down  {
+      transform: rotate(180deg);
+    }
+  
+    @if $orientation == left  {
+      transform: rotate(-90deg);
+    }
+
+    @if $orientation == rightup  {
+        transform: rotate(45deg);
+      }
+    }
+  

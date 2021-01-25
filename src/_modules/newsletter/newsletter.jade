@@ -1,0 +1,12 @@
+mixin newsletter(klass)
+  .newsletter(class=klass)
+    .container
+      .row
+        .col-24
+          .newsletter__container
+            .newsletter__content
+              h3.newsletter__subtitle Registrate ahora
+              h2.newsletter__title Newsletter
+            a.newsletter__button(href="#") Suscribite
+              +icon('arrow', '#fff')
+          img(src="/images/emblem-icon.svg")

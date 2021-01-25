@@ -2,20 +2,14 @@
 
 // Constructor
 var Header = function() {
-    var header = $('.header');
-    var body = $('body');
-    var menuOpen = $('.header__hamburguer');
-    var menuClose = $('.header__nav__close');
+  var header = $('.header');
+  var body = $('body');
+  var menuOpen = $('.header__hamburguer');
 
-    menuOpen.on('click', function(){
-        header.addClass('-open');
-        body.addClass('-hideOverflow');
-    });
-
-    menuClose.on('click', function(){
-        header.removeClass('-open');
-        body.removeClass('-hideOverflow');
-    });
+  menuOpen.on('click', function() {
+    header.toggleClass('-open');
+    body.toggleClass('-hideOverflow');
+  });
 };
 
 module.exports = Header;

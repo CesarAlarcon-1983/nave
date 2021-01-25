@@ -1,2 +1,38 @@
+include ../icon/icon
+
 header.header
-    
+  .container
+    .row
+      .col-24
+        .header__container
+          a.header__logo(href="/")
+            img(src="/images/logo.svg")
+          nav.header__nav
+            .header__nav-buttons
+              a.header__nav-button(href="#") Hazte Amigo
+                +icon('arrow', '#fff')
+              a.header__nav-button(href="#") Servicios NAVE
+                +icon('arrow', '#fff')
+            ul.header__nav-list
+              li.header__nav-item
+                a(href="/quienes-somos") Quienes Somos
+              li.header__nav-item
+                a(href="/proyectos") Proyectos
+              li.header__nav-item
+                a(href="/actividades") Actividades
+              li.header__nav-item
+                a(href="/programacion") Programación
+              li.header__nav-item
+                a(href="/convocatorias") Convocatorias
+              li.header__nav-item
+                a(href="/residencias") Residencias
+              li.header__nav-item
+                a(href="/noticias") Noticias
+              li.header__nav-item
+                a(href="/contacto") Contacto
+              li.header__nav-item
+                a(href="/nave-tv") NAVE TV
+          .header__hamburguer
+            span
+            span
+            span

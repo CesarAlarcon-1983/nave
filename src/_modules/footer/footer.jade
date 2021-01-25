@@ -1,1 +1,51 @@
+include ../icon/icon
 footer.footer
+  .container
+    .row
+      .col-24
+        .row.row-border
+          .col
+            .footer__image
+              img(src="/images/footer-logo-1.png")
+          .col
+            .footer__image
+              img(src="/images/footer-logo-2.png")
+          .col
+            .footer__image
+              img.-background(src="/images/footer-logo-3.png")
+          .col
+            .footer__image
+              img(src="/images/footer-logo-4.png")
+          .col
+            .footer__image
+              img.-background(src="/images/footer-logo-5.png")
+        .row
+          .col-3
+            .footer__emblem
+              img(src="/images/emblem-icon.svg")
+          .col-5
+            nav.footer__nav
+              ul.footer_list
+                li.footer__list__item
+                  a(href="#") Hazte amigo
+                li.footer__list__item
+                  a(href="#") Servicios NAVE
+                li.footer__list__item
+                  a(href="#") NAVE TV
+          .col-6.offset-6
+            .footer__newsletter
+              span.footer__newsletter__title Suscribite a nuestro Newsletter
+              ul.footer__social
+                li.footer__social-item
+                  a(href="#")
+                    i.fa.fa-facebook
+                li.footer__social-item
+                  a(href="#")
+                    i.fa.fa-instagram
+                li.footer__social-item
+                  a(href="#")
+                    i.fa.fa-twitter
+          .col-4
+            a.footer__go-top(href="/")
+              +icon("arrow", '#fff')
+

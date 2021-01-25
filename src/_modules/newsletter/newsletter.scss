@@ -1,0 +1,65 @@
+.newsletter {
+  $n: &;
+
+  &__container {
+    background: $white;
+    padding: 20px;
+    position: relative;
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__button {
+    display: inline-flex;
+    justify-content: center;
+    padding: 5px 20px;
+    background: $black;
+    align-items: center;
+    color: $white;
+    text-decoration: none;
+    border: 1px solid $black;
+    font-size: 20px;
+    font-family: $altFont;
+
+    .icon {
+      margin-left: 10px;
+
+      svg {
+        @include icon(30px, 'rightup')
+      }
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 40px;
+  }
+
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 60px;
+    line-height: .7;
+    margin-bottom: 80px;
+    font-family: $heroTitleFont;
+  }
+
+  img{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+  }
+
+  .-yellow {
+    background: $yellow;
+
+    #{$n}__container {
+      background: transparent;
+    }
+  }
+}

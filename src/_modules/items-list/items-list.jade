@@ -1,0 +1,14 @@
+include ../icon/icon
+
+mixin itemsList(data, format, color)
+  ul.items-list(class=format)
+    if format === 'calendario'
+      each item in data
+        li.items-list__item
+          a(href="#")
+            .items-list__date
+              span.-dia=item.fecha.dia
+              span.-mes=item.fecha.mes
+            span.items-list__title=item.titulo
+            +icon("plus", color)
+

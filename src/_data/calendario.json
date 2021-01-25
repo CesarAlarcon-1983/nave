@@ -1,0 +1,37 @@
+[
+  {
+    "titulo": "Apertura de taller un cuerpo imaginado",
+    "fecha": {
+      "dia": "09",
+      "mes": "Nov"
+    }
+  },
+  {
+    "titulo": "Ciclo vitales, encuentro de solos NAVE-sala de máquinas",
+    "fecha": {
+      "dia": "22",
+      "mes": "Nov"
+    }
+  },
+  {
+    "titulo": "Conversatorio: la relación del movimiento entre la ley y la vida",
+    "fecha": {
+      "dia": "12",
+      "mes": "Dic"
+    }
+  },
+  {
+    "titulo": "Programación 5 años NAVE",
+    "fecha": {
+      "dia": "15",
+      "mes": "Dic"
+    }
+  },
+  {
+    "titulo": "Del hexágono a chile: ciclo de danza francesa",
+    "fecha": {
+      "dia": "17",
+      "mes": "Dic"
+    }
+  }
+]

@@ -2,16 +2,17 @@ $white: #fff;
 $black: #000;
 $corpBlack: #3e372c;
 $darkestGray: #333;
-$darkGray: #787871;
+$darkGray: #7C7773;
 $midGray: #999;
 $lightGray: #ebebeb;
-$lightestGray: #f4f7f8;
+$lightestGray: #F5F5F5;
 $blue: #053f7a;
 $blueGray: #bbc9c9;
+$yellow: #F6CB02;
 
-$mainColor: $blue;
+$mainColor: $yellow;
 $link: $mainColor;
-$linkHover: $mainColor + #333;
+$linkHover: $mainColor;
 $text: $white;
 $textDark: $black;
 $accent: $mainColor;
@@ -35,4 +36,7 @@ $duration: 0.3s;
 $easing: cubic-bezier(.785, .135, .15, .86);
 $easingLight: ease;
 
-$mainFont: 'Open Sans', sans-serif;
+$mainFont: 'Druk-Bold-Web', sans-serif;
+$altFont: 'SFProDisplay', sans-serif;
+$heroTitleFont: 'DrukWide-Bold-Web', sans-serif;
+

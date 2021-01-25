@@ -1,4 +1,77 @@
+include ./_modules/filter/filter
+include ./_modules/article/article
+include ./_modules/banner/banner
+include ./_modules/items-list/items-list
+include ./_modules/newsletter/newsletter
+include ./_modules/slider/slider
+
 extends _layouts/base
 
+
 block content
-    main.home
+  main.home
+    section.home__hero
+      +slider('home__hero__slider')
+        .home__hero__slide
+          .home__hero__slide-img
+            img(src="/images/home/hero.jpg")
+          .container
+            .row
+              .col-24
+                h1.home__hero__title
+                  | Ciclo
+                  br
+                  | Vitales
+                .home__hero__descripcion
+                  |Encuentro de solos
+                  br
+                  | NAVE-sala de máquinas
+                  a(href="#").home__hero__button Comprar entradas
+                    +icon("arrow", "#fff")
+
+        .home__hero__slide
+          .home__hero__slide-img
+            img(src="/images/home/hero.jpg")
+          .container
+            .row
+              .col-24
+                h1.home__hero__title 
+                  | Lorem
+                  br
+                  | Ipsum
+                .home__hero__descripcion
+                  |Encuentro de solos
+                  br
+                  | NAVE-sala de máquinas
+                  a(href="#").home__hero__button Comprar entradas
+                    +icon("arrow", "#fff")
+    section.home__eventos
+      +banner("Actividades", "#000")
+      .container
+        .row
+          .col-24
+            +filter(site.data.eventos)
+          each evento in [site.data.eventos[1]]
+            .col-24(data-content=evento.categoria)
+              .home__eventos__destacado
+                +article(evento)
+          each evento, index in site.data.eventos
+            if index < 3
+              .col-8(data-content=evento.categoria)
+                .home__eventos__list
+                  +article(evento, '-text-right')
+          .col-6.offset-9
+            .home__eventos__buttons
+              a.home__eventos__button(href="/programacion") Ver más actividades
+                +icon("arrow", "#fff")
+          .col-24
+            .-divider
+
+    section.home__calendario
+      +banner("Calendario 2020", "#000")
+      .container
+        .riw
+          .col24
+            +itemsList(site.data.calendario, 'calendario', '#000')
+    section.home__newsletter
+      +newsletter()
