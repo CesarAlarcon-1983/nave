@@ -1,0 +1,78 @@
+include ../_modules/banner/banner
+include ../_modules/items-list/items-list
+
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+  main.residencia
+    section.residencia__hero  
+      .container
+        .row
+          .col-24
+            .residencia__hero__container
+              h1.residencia__hero__title
+                | Residen
+                br
+                | cias
+              p.residencia__hero__text
+                | Escuarón remix, bitácora sonora
+              .residencia__hero__wrapper
+                .residencia__hero__buttons
+                  button.residencia__hero__scroll-button
+                    +icon("arrow", "#fff")
+                  a.residencia__hero__button(href="#") Inscribete en la actividad
+                    +icon("arrow", "#fff")
+                .residencia__hero__social
+                  p.residencia__hero__social-text Compartir
+                  ul.residencia__hero__social-list
+                    li.residencia__hero__social-item
+                      a(href="#")
+                        i.fa.fa-facebook
+                    li.residencia__hero__social-item
+                      a(href="#")
+                        i.fa.fa-twitter
+    section.residencia__details
+      .container
+        .row
+          .col-24
+            .residencia__details__breadcrum
+              ul
+                li Residencia Virtual
+            .residencia__details__content-heading
+              p El artista <span>Daniel Marabolí</span> es uno de los 10 Artistas Asociados, lista que corresponde a creadores nacionales que serán apoyados por el espacio de NAVE por un periodo de tres años.
+              .residencia__details__artist
+                .residencia__details__artist-avatar
+                  img(src="/images/convocatorias/convocatoria-1.jpg")
+                .residencia__details__artist-details
+                  .residencia__details__artist-title ARTISTA
+                  .residencia__details__artist-name Daniel Marabolí
+
+          .col-24.col-md-18.offset-md-3
+            .residencia__details__content
+              p.residencia__details__text Este ciclo nace de la intención de enmarcar el cuerpo como un espacio de resistencia, de reflexión y la vez de creación, trata de un ejercicio que ronda el concepto de la incertidumbre en torno al estar, al crear, al compartir la experiencia dancística y escénica, Nace también de la urgencia de revivir el hábitat donde las artes vivas acostumbran desenvolverse.
+
+              p.residencia__details__text Se propone un tránsito por la caja negra del espacio de Nave, donde los artistas de la escena en relación con la cámara, la luz y el sonido buscarán resolver de manera casi espontánea su práctica, generando de este encuentro un espacio sensible para develar la interioridad de estos artistas, este espacio será registrado y trasmitido en vivo a través de las plataformas de NAVE.
+              img(src="/images/single/main.jpg")
+
+              .residencia__details__group 
+                .residencia__details__group-title Ficha artística
+                .residencia__details__group-text Creación, dirección y diseño sonoroÑ Daniel Marabolí
+                .residencia__details__group-text Diseño visual: Javier Pañella
+                .residencia__details__group-text Producción: Sergio Gilabert
+              
+              .residencia__details__group 
+                .residencia__details__group-title Coordenadas
+                .residencia__details__group-text Podrás escucharlo desde la fecha de lanzamiento el jueves 10 de septiembre a través de la cuenta oficial de Escuadrón remix en <span>Instagram</span> o Spotify, y en las redes de <span>Centro NAVE.</span>
+
+          .col-24
+            .-divider
+    section.residencia__fechas
+      +banner("Fechas", "#000")
+      .container
+        .row
+          .col-24
+            +itemsList(site.data.fechas, "programas", "#fff")

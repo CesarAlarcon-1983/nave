@@ -1,0 +1,58 @@
+include ../_modules/banner/banner
+include ../_modules/items-list/items-list
+
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+  main.programa
+    section.programa__hero  
+      .container
+        .row
+          .col-24
+            .programa__hero__container
+              h1
+                | Ciclo
+                br
+                | Vitales
+              p
+                | Encuentro de solos
+                br
+                |Nave-sala de máquinas
+              .programa__hero__buttons
+                button.programa__hero__scroll-button
+                  +icon("arrow", "#fff")
+                a.programa__hero__button(href="#") Comprar entradas
+                  +icon("arrow", "#fff")
+    section.programa__details
+      .container
+        .row
+          .col-24
+            .programa__details__breadcrum
+              ul
+                li Ciclo vitales
+                li Encuentro
+                li NAVE
+                li Sala de máquinas
+            .programa__details__content-heading
+              p Como parte de los fondos de emergencia adjudicados del Ministerio de las Culturas, las Artes y el Patrimonio en Noviembre se dará inicio al Ciclo Vitales, encuentro de solos de NAVE junto a Sala de Máquinas.
+              .programa__details__emblem-container
+                img(src="/images/single/emblem.png")
+          .col-24.col-md-18.offset-md-3
+            .programa__details__content
+              p Este ciclo nace de la intención de enmarcar el cuerpo como un espacio de resistencia, de reflexión y la vez de creación, trata de un ejercicio que ronda el concepto de la incertidumbre en torno al estar, al crear, al compartir la experiencia dancística y escénica, Nace también de la urgencia de revivir el hábitat donde las artes vivas acostumbran desenvolverse.
+              p Se propone un tránsito por la caja negra del espacio de Nave, donde los artistas de la escena en relación con la cámara, la luz y el sonido buscarán resolver de manera casi espontánea su práctica, generando de este encuentro un espacio sensible para develar la interioridad de estos artistas, este espacio será registrado y trasmitido en vivo a través de las plataformas de NAVE.
+              img(src="/images/single/main.jpg")
+              p Este ciclo es una colaboración junto a  Salas de Máquinas que surgió a propósito de un diálogo durante la cuarentena, que quisimos transportar a la escena como gesto de nuestro interés de continuar nuestra labor de gestores y propulsores de las artes vivas, a la vez de proponer una instancia de acercamiento de la danza y el movimiento hacia la audiencia y de otorgarle al intérprete/creador la posibilidad de volver a su práctica escénica.
+              p Para esta propuesta se han determinado 3 fechas de exhibición de los solos donde se estrenará a través de nuestro Youtube el trabajo de dos coreógrafos e intérpretes a las 19 hrs. en una curatoría entre NAVE y Sala de máquinas donde seleccionó a Nuri Gutes, Pablo Zamorano, Ninoska Soto, Carolina Cifras, Carla Bolgueri y  Andrés Salazar para presentar sus propuestas. La transmisión dura 40 minutos.
+          .col-24
+            .-divider
+    section.programa__fechas
+      +banner("Fechas", "#000")
+      .container
+        .row
+          .col-24
+            +itemsList(site.data.fechas, "programas", "#fff")

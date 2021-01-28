@@ -1,0 +1,64 @@
+include ../_modules/banner/banner
+include ../_modules/items-list/items-list
+include ../_modules/article/article
+
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+  main.servicios
+    section.servicios__hero  
+      .container
+        .row
+          .col-24
+            .servicios__hero__container
+              h1.servicios__hero__title
+                | Servicios
+                br
+                | NAVE
+              .servicios__hero__buttons
+                button.servicios__hero__scroll-button
+                  +icon("arrow", "#fff")
+                a.servicios__hero__button(href="#") Cotiza tu espacio
+                  +icon("arrow", "#fff")
+    section.servicios__details
+      .container
+        .row
+          .col-24
+            .servicios__details__content-heading
+              p.servicios__details__text NAVE, además de ser un espacio pensado para las artes, ha sido diseñado para realizar eventos dentro de un edificio patrimonial, en el corazon del barrio Yungay.
+              .servicios__details__emblem-container
+                img(src="/images/single/emblem.png")
+          .col-24.col-md-18.offset-md-3
+            .row
+              .col-24
+                .servicios__details__content
+                  p.servicios__details__text El dificio cuenta con un ala específicamente dedicada a catering, con servicios básicos y un montacargas que permite distribuir la logística de cualquier evento dentro de los distintos espacios del edificio.
+              each item in site.data.espacios.espacios
+                .col-24.col-md-12
+                  +article(item, '-convocatoria')
+          .col-24
+            .-divider
+    section.servicios__fechas
+      +banner("Espacios", "#000")
+      .container
+        .row
+          .col-24
+            +itemsList(site.data.espacios.list, "espacios", "#fff")
+    section.servicios__contacto
+      .container
+        .row
+          .col-24
+            .servicios__contacto__container
+              .servicios__contacto__content
+                h3.servicios__contacto__subtitle Cuéntanos
+                h2.servicios__contacto__title Que evento te gustaría realizar
+              p.servicios__contacto__text Para visitarnos, consulta los precios y la disponibilidad de los espacios, escríbenos a arriendos@nave.io o llena el siguiente formulario y te contactaremos. 
+            img(src="/images/emblem-icon.svg")
+
+
+
+

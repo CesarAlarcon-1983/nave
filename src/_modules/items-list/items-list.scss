@@ -1,4 +1,6 @@
 .items-list {
+  $i: &;
+
   &__item {
     position: relative;
     margin-bottom: 20px;
@@ -25,13 +27,18 @@
   }
 
   &__date {
-    width: 10%;
+    width: 13%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-right: 10px;
-    font-size: 30px;
+    font-size: 20px;
+
+    @include mq(md) {
+      font-size: 30px;
+      width: 10%;
+    }
 
     .-dia {
       font-family: $heroTitleFont;
@@ -44,10 +51,125 @@
   }
 
   &__title {
-    width: 100%;
+    width: 75%;
     display: flex;
     align-items: center;
-    font-size: 40px;
+    font-size: 24px;
     text-transform: uppercase;
+
+    @include mq(md) {
+      font-size: 40px;
+      width: 100%;
+    }
+  }
+
+  &.convocatorias,
+  &.programas,
+  &.espacios {
+    margin-top: 50px;
+
+    #{$i}__item {
+      @include mq(md) {
+        display: flex;
+        flex-wrap: nowrap;
+        text-decoration: none;
+      }
+    }
+
+    #{$i}__date {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+      
+      @include mq(md) {
+        width: 40%;
+        margin-bottom: 0;
+      }
+
+      span {
+        font-size: 50px;
+        font-family: $mainFont;
+        text-transform: uppercase;
+      }
+    }
+    
+    #{$i}__title {
+      width: 100%;
+      font-size: 18px;
+      font-family: $altFont;
+      margin-bottom: 20px;
+      
+      @include mq(md) {
+        width: 70%;
+        margin-bottom: 0;
+      }
+    }
+
+    #{$i}__button {
+      display: inline-flex;
+      justify-content: center;
+      padding: 5px 20px;
+      background: $black;
+      align-items: center;
+      color: $white;
+      text-decoration: none;
+      font-size: 16px;
+      font-family: $altFont;
+      white-space: nowrap;
+      border: 1px solid $black;
+      
+      .icon {
+        position: static;
+        top: auto;
+        right: auto;
+        transform: translateY(0);
+  
+        svg {
+            @include icon(30px, 'rightup');
+        }
+      }
+    }
+  }
+
+  &.convocatorias {
+    #{$i}__item {
+      justify-content: space-between;
+    }
+
+    #{$i}__date {
+      @include mq(md) {
+        width: 70%;
+      }
+    }
+  }
+
+  &.espacios {
+    #{$i}__title {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+      font-size: 50px;
+      font-family: $mainFont;
+      text-transform: uppercase;
+      
+      @include mq(md) {
+        width: 35%;
+        margin-bottom: 0;
+      }
+    }
+
+    #{$i}__description {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      font-size: 20px;
+      font-family: $altFont;
+      margin-bottom: 20px;
+      
+      @include mq(md) {
+        width: 65%;
+        margin-bottom: 0;
+      }
+    }
   }
 }

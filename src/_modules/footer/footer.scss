@@ -2,6 +2,8 @@
   background: $darkGray;
   padding: 50px 0;
   font-family: $altFont;
+  position: relative;
+  z-index: 2;
 
   .row-border {
     padding-bottom: 50px;
@@ -14,6 +16,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
+
+    @include mq(md) {
+      margin-bottom: 0;
+    }
 
     img {
       &.-background {
@@ -23,8 +30,22 @@
   }
 
   &__emblem {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq(md) {
+      margin-bottom: 0;
+    }
+
     img {
       filter: invert(100%);
+      width: 30%;
+
+      @include mq(md) {
+        width: 70%;
+      }
     }
   }
 
@@ -33,6 +54,11 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-bottom: 40px;
+
+    @include mq(md) {
+      margin-bottom: 0;
+    }
   }
 
   &__list {
@@ -49,7 +75,13 @@
   }
 
   &__newsletter {
-    text-align: right;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @include mq(md) {
+      text-align: right;
+      margin-bottom: 0;
+    }
 
     &__title {
       color: $white;
@@ -61,13 +93,24 @@
 
   &__social {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 
+    @include mq(md) {
+      justify-content: flex-end;
+    }
   }
 
   &__social-item {
+    margin: 0 20px;
+
+    @include mq(md) {
+      margin: 0;
+    }
+
     &:not(:first-child) {
-      margin-left: 40px;
+      @include mq(md) {
+        margin-left: 40px;
+      }
     }
 
     a {

@@ -12,3 +12,30 @@ mixin itemsList(data, format, color)
             span.items-list__title=item.titulo
             +icon("plus", color)
 
+    if format === 'programas'
+      each item in data
+        li.items-list__item
+          .items-list__date
+            span.-dia=item.fecha
+          span.items-list__title=item.titulo
+          .items-list__buttons
+            a.items-list__button(href="#") Comprar entradas
+              +icon("arrow", color)
+
+    if format === 'convocatorias'
+      each item in data
+        li.items-list__item
+          .items-list__date
+            span.-dia=item.fecha
+          .items-list__buttons
+            a.items-list__button(href="#") Inscribite a la actividad
+              +icon("arrow", color)
+
+    if format === 'espacios'
+      each item in data
+        li.items-list__item
+          span.items-list__title=item.titulo
+          span.items-list__description=item.descripcion
+          a.items-list__button(href="#") Descargar ficha (PDF)
+            +icon("arrow", color)
+

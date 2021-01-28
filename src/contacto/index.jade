@@ -1,0 +1,50 @@
+include ../_modules/icon/icon
+
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+  main.contacto
+    section.contacto__hero  
+      .container
+        .row
+          .col-24
+            .contacto__hero__container
+              h1.contacto__hero__title Contacto
+    section.contacto__details
+      .container
+        .row
+          .col-24.col-md-8
+            .contacto__details__container
+              h3.contacto__details__title Dirección
+              span.contacto__details__text Libertad 430, Santigo, Chile
+              span.contacto__details__text Código postal 8350422
+              span.contacto__details__text
+                +icon('wheelchair', '#000')
+                | Acceso
+          .col-24.col-md-8
+            .contacto__details__container
+              h3.contacto__details__title Cómo llegar
+              span.contacto__details__text
+                +icon('bus', '#000')
+                | 403 |
+                | 512 |
+                | 322
+              span.contacto__details__text Metro Cumming o Quinta Normal
+          .col-24.col-md-8
+            .contacto__details__container
+              h3.contacto__details__title E-mail
+              span.contacto__details__text
+                | Escríbenos a &nbsp;
+                a(href="mailto:info@nave.io" target="_blank")  info@nave.io
+              span.contacto__details__text
+                | Solicita una visaita a través de &nbsp;
+                br
+                a(href="mailto:visitas@nave.io" target="_blank") visitas@nave.io
+      .contacto__details__map
+        .contacto__details__map-container
+          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.3370183700226!2d-70.6764000841873!3d-33.4405251043901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c4523c8730a3%3A0xdccfa21a85d92bf3!2sLibertad%20430%2C%20Santiago%2C%20Regi%C3%B3n%20Metropolitana%2C%20Chile!5e0!3m2!1ses-419!2sar!4v1611706378243!5m2!1ses-419!2sar' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')
+

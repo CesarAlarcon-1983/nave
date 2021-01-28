@@ -1,0 +1,54 @@
+{
+  "espacios": [
+    {
+      "titulo": "Sala negra",
+      "descripcion": "Es un espacio que permite adaptarse a diversos programas como conciertos, lanzamientos, pasarelas, y exposiciones con requerimientos técnicos especiales.",
+      "image": "/images/servicios/sala-negra.jpg"
+    },
+    {
+      "titulo": "Azotea",
+      "descripcion": "Cuenta con la instalación de una carpa de circo, acceso por ascensor y una vista privilegiada del barrio Yungay, Santiago y la Cordillera de Los Andes.",
+      "image": "/images/servicios/azotea.jpg"
+    },
+    {
+      "titulo": "Sala 1 y sala 2",
+      "descripcion": "Para recepciones privadas, charlas, seminarios, lanzamientos y proyecciones, entre otros.",
+      "image": "/images/servicios/sala-1y2.jpg"
+    },
+    {
+      "titulo": "Infraestructura",
+      "descripcion": "La infraestructura paralela para catering con entrada independiente, montacargas y espacio habilitado para cocina.",
+      "image": "/images/servicios/infraestructura.jpg"
+    }
+  ],
+  "list": [
+    {
+      "titulo": "Sala negra",
+      "descripcion": "Theater"
+    },
+    {
+      "titulo": "Azotea",
+      "descripcion": "Rooftop"
+    },
+    {
+      "titulo": "Sala blanca",
+      "descripcion": "White Room"
+    },
+    {
+      "titulo": "Sala 1",
+      "descripcion": "Studio 1"
+    },
+    {
+      "titulo": "Sala 2",
+      "descripcion": "Studio 2"
+    },
+    {
+      "titulo": "Residencia",
+      "descripcion": "Hostel & Residence"
+    },
+    {
+      "titulo": "Cocina-Catering",
+      "descripcion": "Kitchen-Catering Facilities"
+    }
+  ]
+}

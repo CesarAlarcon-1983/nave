@@ -1,6 +1,6 @@
 include ../icon/icon
 
-mixin banner(title, color)
+mixin banner(title, format, color)
   .banner
     span.-top
       | #{title}
@@ -17,20 +17,21 @@ mixin banner(title, color)
       +icon("arrow", "#{color}")
       | #{title}
       +icon("arrow", "#{color}")
-    span.-bottom 
-      | #{title}
-      +icon("arrow", "#{color}")
-      | #{title}
-      +icon("arrow", "#{color}")
-      | #{title}
-      +icon("arrow", "#{color}")
-      | #{title}
-      +icon("arrow", "#{color}")
-      | #{title}
-      +icon("arrow", "#{color}")
-      | #{title}
-      +icon("arrow", "#{color}")
-      | #{title}
-      +icon("arrow", "#{color}")
-      | #{title}
-      +icon("arrow", "#{color}")
+    if format === 'double'
+      span.-bottom 
+        | #{title}
+        +icon("arrow", "#{color}")
+        | #{title}
+        +icon("arrow", "#{color}")
+        | #{title}
+        +icon("arrow", "#{color}")
+        | #{title}
+        +icon("arrow", "#{color}")
+        | #{title}
+        +icon("arrow", "#{color}")
+        | #{title}
+        +icon("arrow", "#{color}")
+        | #{title}
+        +icon("arrow", "#{color}")
+        | #{title}
+        +icon("arrow", "#{color}")

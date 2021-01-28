@@ -1,34 +1,47 @@
 .header {
-    position: absolute;
+    $h: &;
+
+    @include trans;
+
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: auto;
     z-index: 1000;
+    height: 10vh;
 
     @include mq(md) {
         height: 15vh;
     }
 
-    $h: &;
-
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 0;
-        height: 100%;
+        height: 10vh;
+        padding: 15px 0;
+        
+        @include mq(md) {
+            padding: 20px 0;
+            height: 15vh;
+        }
     }
 
     &__logo {
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
-        height: 70%;
+        height: 100%;
         width: auto;
+        z-index: 1001;
 
         img {
             height: 100%;
+            
+            @include mq(md) {
+                height: 75%;
+            }
         }
     }
 
@@ -42,23 +55,36 @@
         height: 100vh;
         transform: translateX(-100%);
         background: $black;
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 15px;
+        
         @include mq(md) {
+            height: 100%;
             position: static;
             top: auto;
             left: auto;
             width: auto;
-            height: auto;
             transform: translateX(0);
             background: transparent;
+            padding: 0;
+            justify-content: space-between;
         }
     }
 
     &__nav-buttons {
         display: flex;
-        justify-content: flex-end;
         width: 100%;
-        margin-bottom: 20px;
+        order: 2;
+        flex-direction: column;
+        
+        @include mq(md){
+            order: 1;
+            justify-content: flex-end;
+            flex-direction: row;
+        }
     }
 
     &__nav-button {
@@ -68,8 +94,15 @@
         background: $yellow;
         align-items: center;
         color: $white;
-        margin-left: 15px;
+        margin-bottom: 10px;
         text-decoration: none;
+        font-family: $altFont;
+
+        @include mq(md) {
+            margin-left: 15px;
+            margin-bottom: 0;
+            font-size: 18px;
+        }
 
         .icon {
             margin-left: 10px;
@@ -81,26 +114,52 @@
     }
 
     &__nav-list {
+        order: 1;
+        margin-bottom: 10px;
+        padding-top: 10vh;
+
         @include mq(md) {
             display: flex;
+            order: 2;
+            margin-bottom: 0;
+            padding-top: 0;
         }
     }
 
     &__nav-item {
-        &:not(:first-child) {
-            margin-left: 20px;
+        margin-bottom: 10px;
+
+        @include mq(md) {
+            margin-bottom: 0;
         }
+
+        &:not(:first-child) {
+            @include mq(md) {
+                margin-left: 30px;
+            }
+        }
+
         a {
             color: $white;
             text-decoration: none;
+            font-size: 26px;
+            font-family: $altFont;
+
+            @include mq(md) {
+                font-size: 14px;
+            }
         }
 
+    }
+
+    &.-scrolled {
+        background: $black;
     }
 
     &__hamburguer {
         cursor: pointer;
         width: 25px;
-        z-index: 1000;
+        z-index: 1001;
 
         @include mq(md) {
             display: none;

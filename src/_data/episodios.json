@@ -1,0 +1,78 @@
+{
+  "ciclo_solos": [
+    {
+      "image": "/images/nave-tv/solos-1.jpg",
+      "titulo": "Ciclo Vitales 3",
+      "descripcion": "En este último estreno contaremos con el trabajo de Nury Gutes y la creadora nacional Carla Bolgeri quienes...",
+      "url": "/episodio"
+    },
+    {
+      "image": "/images/nave-tv/solos-2.jpg",
+      "titulo": "Ciclo Vitales 2",
+      "descripcion": "En este último estreno contaremos con el trabajo de Nury Gutes y la creadora nacional Carla Bolgeri quienes...",
+      "url": "/episodio"
+    },
+    {
+      "image": "/images/nave-tv/solos-3.jpg",
+      "titulo": "Ciclo Vitales 1",
+      "descripcion": "En este último estreno contaremos con el trabajo de Nury Gutes y la creadora nacional Carla Bolgeri quienes...",
+      "url": "/episodio"
+    },
+    {
+      "image": "/images/nave-tv/solos-1.jpg",
+      "titulo": "Ciclo Vitales 3",
+      "descripcion": "En este último estreno contaremos con el trabajo de Nury Gutes y la creadora nacional Carla Bolgeri quienes...",
+      "url": "/episodio"
+    },
+    {
+      "image": "/images/nave-tv/solos-2.jpg",
+      "titulo": "Ciclo Vitales 2",
+      "descripcion": "En este último estreno contaremos con el trabajo de Nury Gutes y la creadora nacional Carla Bolgeri quienes...",
+      "url": "/episodio"
+    },
+    {
+      "image": "/images/nave-tv/solos-3.jpg",
+      "titulo": "Ciclo Vitales 1",
+      "descripcion": "En este último estreno contaremos con el trabajo de Nury Gutes y la creadora nacional Carla Bolgeri quienes...",
+      "url": "/episodio"
+    }
+  ],
+  "entrevistas": [
+    {
+      "image": "/images/nave-tv/entrevistas-1.jpg",
+      "titulo": "Capítulo 2 NAVETV 2: Bárbara Pinto",
+      "descripcion": "En este último estreno contaremos con el trabajo de Nury Gutes y la creadora nacional Carla Bolgeri quienes...",
+      "url": "/episodio"
+    },
+    {
+      "image": "/images/nave-tv/entrevistas-2.jpg",
+      "titulo": "Cap 1 NAVETV 2: Rodrigo Sobarzo",
+      "descripcion": "En este último estreno contaremos con el trabajo de Nury Gutes y la creadora nacional Carla Bolgeri quienes...",
+      "url": "/episodio"
+    },
+    {
+      "image": "/images/nave-tv/entrevistas-3.jpg",
+      "titulo": "Documental temporada 1 NAVETV",
+      "descripcion": "En este último estreno contaremos con el trabajo de Nury Gutes y la creadora nacional Carla Bolgeri quienes...",
+      "url": "/episodio"
+    },
+    {
+      "image": "/images/nave-tv/entrevistas-1.jpg",
+      "titulo": "Capítulo 2 NAVETV 2: Bárbara Pinto",
+      "descripcion": "En este último estreno contaremos con el trabajo de Nury Gutes y la creadora nacional Carla Bolgeri quienes...",
+      "url": "/episodio"
+    },
+    {
+      "image": "/images/nave-tv/entrevistas-2.jpg",
+      "titulo": "Cap 1 NAVETV 2: Rodrigo Sobarzo",
+      "descripcion": "En este último estreno contaremos con el trabajo de Nury Gutes y la creadora nacional Carla Bolgeri quienes...",
+      "url": "/episodio"
+    },
+    {
+      "image": "/images/nave-tv/entrevistas-3.jpg",
+      "titulo": "Documental temporada 1 NAVETV",
+      "descripcion": "En este último estreno contaremos con el trabajo de Nury Gutes y la creadora nacional Carla Bolgeri quienes...",
+      "url": "/episodio"
+    }
+  ]
+}

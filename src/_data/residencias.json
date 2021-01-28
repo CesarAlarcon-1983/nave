@@ -1,0 +1,65 @@
+[
+  {
+    "categoria": "Residencia Virtual",
+    "titulo": "Residencia Virtual: Investigación Fundación CAI",
+    "fechas": "Junio a octubre 2020",
+    "image": "/images/convocatorias/convocatoria-1.jpg",
+    "url": "/residencia"
+  },
+  {
+    "categoria": "Residencia Virtual",
+    "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
+    "fechas": "Septiembre a noviembre 2020",
+    "image": "/images/convocatorias/convocatoria-2.jpg",
+    "url": "/residencia"
+  },
+  {
+    "categoria": "Residencia",
+    "titulo": "Mapa físico de chile",
+    "fechas": "Agosto a diciembre 2020",
+    "image": "/images/convocatorias/convocatoria-3.jpg",
+    "url": "/residencia"
+  },
+  {
+    "categoria": "Residencia",
+    "titulo": "Say you're sorry (Di que lo lamentas)",
+    "fechas": "6 al 24 de enero",
+    "image": "/images/convocatorias/convocatoria-4.jpg",
+    "url": "/residencia"
+  },
+  {
+    "categoria": "Residencia",
+    "titulo": "Emerger",
+    "fechas": "6 al 17 de enero",
+    "image": "/images/convocatorias/convocatoria-5.jpg",
+    "url": "/convocatoria"
+  },
+  {
+    "categoria": "Residencia",
+    "titulo": "Hamman",
+    "fechas": "6 de enero de 2021",
+    "image": "/images/convocatorias/convocatoria-6.jpg",
+    "url": "/residencia"
+  },
+  {
+    "categoria": "Residencia",
+    "titulo": "The machine of horizontal dreams (La maquina de sueños horizontales)",
+    "fechas": "9 al 27 de marzo",
+    "image": "/images/convocatorias/convocatoria-7.jpg",
+    "url": "/convocatoria"
+  },
+  {
+    "categoria": "Residencia",
+    "titulo": "Maneras de salir / ways to exit",
+    "fechas": "18 de noviembre al 17 de enero",
+    "image": "/images/convocatorias/convocatoria-8.jpg",
+    "url": "/residencia"
+  },
+  {
+    "categoria": "Residencia",
+    "titulo": "Rodaje video-performance aurora",
+    "fechas": "Octubre a diciembre 2020",
+    "image": "/images/convocatorias/convocatoria-9.jpg",
+    "url": "/residencia"
+  }
+]

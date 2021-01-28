@@ -1,10 +1,13 @@
 include ../icon/icon
 
 mixin article(data, klass)
-  a(href=data.url).article(class=klass)
+  a(href=data.url class=klass).article
     .article__image
       img(src=data.image)
+      if data.inscripcion
+        .article__inscripcion Abierta
     .article__content
       .article__category=data.categoria
       .article__date=data.fechas
       .article__title=data.titulo
+      .article__description=data.descripcion

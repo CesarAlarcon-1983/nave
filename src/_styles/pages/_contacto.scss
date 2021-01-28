@@ -1,0 +1,120 @@
+.contacto {
+  background: $lightestGray;
+
+  &__hero {
+    background: url('/images/contacto/hero.jpg') no-repeat center center / cover;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $black;
+      opacity: .5;
+    }
+
+    @include mq(md) {
+      padding-top: 15vh;
+    }
+
+    &__container {
+      padding: 100px 0;
+      z-index: 2;
+      position: relative;
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font-family: $heroTitleFont;
+      color: #000;
+      mix-blend-mode: screen;
+      -webkit-text-stroke: 1px $white;
+      font-size: 36px;
+      margin-bottom: 40px;
+      margin: 0;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background: url('/images/transparent.png') repeat center center;
+      
+      @include mq(md) {
+        padding-left: 10px;
+        font-size: 110px;
+      }
+    }
+  }
+
+  &__details {
+    &__container {
+      padding: 20px 0;
+
+      @include mq(md) {
+        padding: 50px 0;
+      }
+    }
+
+    &__title {
+      font-size: 50px;
+      text-transform: uppercase;
+      margin: 0;
+      margin-bottom: 40px;
+    }
+
+    &__text {
+      display: flex;
+      flex-wrap: wrap;
+      font-family: $altFont;
+      font-size: 18px;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+      white-space: nowrap;
+      
+      br {
+        @include mq(md) {
+          display: none;
+        }
+      }
+  
+      a {
+        text-decoration: none;
+        color: $black;
+      }
+
+      .icon {
+        margin-right: 10px;
+        svg {
+          @include icon(20px)
+        }
+      }
+    }
+
+    &__map-container {
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      overflow: hidden;
+      position: relative;
+
+      @include mq(md) {
+        padding-bottom: 30%;
+      }
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  
+  .-divider {
+    margin-bottom: 20px;
+    padding-bottom: 70px;
+    border-bottom: 1px solid $black;
+  }
+}

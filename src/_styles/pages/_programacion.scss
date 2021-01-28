@@ -1,0 +1,58 @@
+.programacion {
+  &__hero {
+    background: url('/images/home/hero.jpg') no-repeat center center / cover;
+    @include mq(md) {
+      padding-top: 15vh;
+    }
+
+    &__container {
+      padding: 100px 0;
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font-family: $heroTitleFont;
+      color: #000;
+      mix-blend-mode: screen;
+      -webkit-text-stroke: 1px $white;
+      font-size: 50px;
+      margin-bottom: 40px;
+      margin: 0;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background: url('/images/transparent.png') repeat center center;
+      
+      @include mq(md) {
+        padding-left: 10px;
+        font-size: 110px;
+      }
+    }
+  }
+
+  &__eventos {
+    padding: 50px 0;
+
+    &__button {
+      display: flex;
+      justify-content: center;
+      padding: 5px 20px;
+      background: $black;
+      align-items: center;
+      color: $white;
+      text-decoration: none;
+      font-size: 16px;
+      font-family: $altFont;
+      white-space: nowrap;
+      margin-top: 20px;
+      
+      .icon {
+        margin-left: 10px;
+
+        svg {
+            @include icon(30px, 'down');
+        }
+      }
+    }
+  }
+}

@@ -2,32 +2,8 @@
   background: $lightestGray;
 
   &__hero {
-    &__button {
-      position: absolute;
-      top: 20px;
-      left: 100%;
-      display: flex;
-      white-space: nowrap;
-      justify-content: center;
-      padding: 5px 20px;
-      background: $black;
-      align-items: center;
-      color: $white;
-      text-decoration: none;
-      z-index: 999;
-      font-family: $altFont;
-      font-size: 20px;
-
-      .icon {
-          margin-left: 10px;
-
-          svg {
-              @include icon(30px, 'rightup');
-          }
-      }
-    }
     .slick-slide {
-      height: 80vh;
+      height: 90vh;
     }
 
     .slick-slider {
@@ -112,24 +88,61 @@
       color: #000;
       mix-blend-mode: screen;
       -webkit-text-stroke: 1px $white;
-      font-size: 110px;
+      font-size: 50px;
       margin-bottom: 40px;
-      padding-left: 10px;
       margin: 0;
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
       background: url('/images/transparent.png') repeat center center;
+      
+      @include mq(md) {
+        padding-left: 10px;
+        font-size: 110px;
+      }
     }
 
     &__descripcion {
       color: $white;
-      font-size: 80px;
+      font-size: 40px;
       text-transform: uppercase;
       margin: 0;
       display: inline-block;
-
       position: relative;
+
+      @include mq(md) {
+        font-size: 80px;
+      }
+    }
+
+    &__button {
+      display: flex;
+      white-space: nowrap;
+      justify-content: center;
+      padding: 5px 20px;
+      background: $black;
+      align-items: center;
+      color: $white;
+      text-decoration: none;
+      z-index: 999;
+      font-family: $altFont;
+      font-size: 20px;
+      margin-top: 40px;
+
+      @include mq(md) {
+        position: absolute;
+        top: 20px;
+        left: 100%;
+        margin-top: 0;
+      }
+
+      .icon {
+          margin-left: 10px;
+
+          svg {
+              @include icon(30px, 'rightup');
+          }
+      }
     }
   }
 

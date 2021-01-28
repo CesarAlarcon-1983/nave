@@ -1,0 +1,33 @@
+include ../_modules/filter/filter
+include ../_modules/article/article
+
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+  main.programacion
+    section.programacion__hero  
+      .container
+        .row
+          .col-24
+            .programacion__hero__container
+              h1.programacion__hero__title
+                | progra
+                br
+                | mación
+    section.programacion__eventos
+      .container
+        .row
+          .col-24
+            +filter(site.data.eventos)
+          each evento, index in site.data.eventos
+            .col-24.col-md-8(data-content=evento.categoria)
+                +article(evento, '-eventos')
+          .col-24.col-md-4.offset-md-10
+            .programacion__eventos__buttons
+              a.programacion__eventos__button(href="/programacion") Cargar más
+                +icon("arrow", "#fff")
+

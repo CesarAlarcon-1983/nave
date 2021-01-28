@@ -7,7 +7,6 @@ include ./_modules/slider/slider
 
 extends _layouts/base
 
-
 block content
   main.home
     section.home__hero
@@ -18,16 +17,17 @@ block content
           .container
             .row
               .col-24
-                h1.home__hero__title
-                  | Ciclo
-                  br
-                  | Vitales
-                .home__hero__descripcion
-                  |Encuentro de solos
-                  br
-                  | NAVE-sala de máquinas
-                  a(href="#").home__hero__button Comprar entradas
-                    +icon("arrow", "#fff")
+                .home__hero__slide-container
+                  h1.home__hero__title
+                    | Ciclo
+                    br
+                    | Vitales
+                  .home__hero__descripcion
+                    |Encuentro de solos
+                    br
+                    | NAVE-sala de máquinas
+                    a(href="#").home__hero__button Comprar entradas
+                        +icon("arrow", "#fff")
 
         .home__hero__slide
           .home__hero__slide-img
@@ -35,18 +35,19 @@ block content
           .container
             .row
               .col-24
-                h1.home__hero__title 
-                  | Lorem
-                  br
-                  | Ipsum
-                .home__hero__descripcion
-                  |Encuentro de solos
-                  br
-                  | NAVE-sala de máquinas
-                  a(href="#").home__hero__button Comprar entradas
-                    +icon("arrow", "#fff")
+                .home__hero__slide-container
+                  h1.home__hero__title  
+                    | Lorem
+                    br
+                    | Ipsum
+                  .home__hero__descripcion
+                    |Encuentro de solos
+                    br
+                    | NAVE-sala de máquinas
+                    a(href="#").home__hero__button Comprar entradas
+                        +icon("arrow", "#fff")
     section.home__eventos
-      +banner("Actividades", "#000")
+      +banner("Actividades", "double", "#000")
       .container
         .row
           .col-24
@@ -57,10 +58,10 @@ block content
                 +article(evento)
           each evento, index in site.data.eventos
             if index < 3
-              .col-8(data-content=evento.categoria)
+              .col-24.col-md-8(data-content=evento.categoria)
                 .home__eventos__list
-                  +article(evento, '-text-right')
-          .col-6.offset-9
+                  +article(evento, '-eventos')
+          .col-24.col-md-6.offset-md-9
             .home__eventos__buttons
               a.home__eventos__button(href="/programacion") Ver más actividades
                 +icon("arrow", "#fff")
@@ -68,7 +69,7 @@ block content
             .-divider
 
     section.home__calendario
-      +banner("Calendario 2020", "#000")
+      +banner("Calendario 2020", 'double', "#000")
       .container
         .riw
           .col24

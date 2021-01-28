@@ -1,0 +1,133 @@
+.quienes-somos {
+  background: $lightestGray;
+
+  &__hero {
+    background: url('/images/quienes-somos/hero.jpg') no-repeat center center / cover;
+    @include mq(md) {
+      padding-top: 15vh;
+    }
+
+    &__container {
+      padding: 100px 0;
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font-family: $heroTitleFont;
+      color: #000;
+      mix-blend-mode: screen;
+      -webkit-text-stroke: 1px $white;
+      font-size: 50px;
+      margin-bottom: 40px;
+      margin: 0;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background: url('/images/transparent.png') repeat center center;
+      
+      @include mq(md) {
+        padding-left: 10px;
+        font-size: 110px;
+      }
+    }
+  }
+
+  &__details {
+    padding: 50px 0;
+
+    &__content {
+      margin-bottom: 40px;
+      @include mq(md) {
+        display: flex;
+      }
+    }
+
+    &__image {
+      width: 100%;
+      margin-bottom: 20px;
+
+      @include mq(md) {
+        width: 45%;
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 100%;
+
+        @include mq(md) {
+          width: 80%;
+        }
+      }
+    }
+
+    &__text-container {
+      width: 100%;
+
+      @include mq(md) {
+        width: 55%;
+      }
+    }
+
+    &__text {
+      font-family: $altFont;
+      line-height: 1.5;
+      letter-spacing: 2px;
+      font-size: 16px;
+      margin: 0;
+      margin-bottom: 20px;
+
+      @include mq(md) {
+        font-size: 18px;
+      }
+    }
+
+    &__destacado-text {
+      font-family: $altFont;
+      line-height: 1.5;
+      letter-spacing: 2px;
+      font-weight: 500;
+      font-size: 20px;
+
+      @include mq(md) {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__video {
+    z-index: 1;
+
+    &__container {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      margin-bottom: -5px;
+      position: relative;
+      display: block;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      width: 50px;
+      height: 50px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      outline: none;
+
+      @include mq(md) {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+include ../_modules/filter/filter
+include ../_modules/article/article
+
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+  main.residencias
+    section.residencias__hero  
+      .container
+        .row
+          .col-24
+            .residencias__hero__container
+              h1.residencias__hero__title
+                | Residen
+                br
+                | cias
+    section.residencias__eventos
+      .container
+        .row
+          .col-24
+            +filter(site.data.residencias)
+          each evento, index in site.data.residencias
+            .col-24.col-md-8(data-content=evento.categoria)
+                +article(evento, '-convocatoria')
+          .col-24.col-md-4.offset-md-10
+            .residencias__eventos__buttons
+              a.residencias__eventos__button(href="/residencia") Cargar más
+                +icon("arrow", "#fff")
+

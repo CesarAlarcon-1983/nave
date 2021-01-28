@@ -1,0 +1,60 @@
+include ../_modules/banner/banner
+include ../_modules/items-list/items-list
+
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+  main.convocatoria
+    section.convocatoria__hero  
+      .container
+        .row
+          .col-24
+            .convocatoria__hero__container
+              h1.convocatoria__hero__title
+                | Convo
+                br
+                | Catorias
+              p.convocatoria__hero__description Taller movimiento mineral
+              .convocatoria__hero__buttons
+                button.convocatoria__hero__scroll-button
+                  +icon("arrow", "#fff")
+                a.convocatoria__hero__button(href="#") Inscribete a la actividad
+                  +icon("arrow", "#fff")
+    section.convocatoria__details
+      .container
+        .row
+          .col-24
+            .convocatoria__details__breadcrum
+              ul
+                li Laboratorio
+            .convocatoria__details__content-heading
+              p.convocatoria__details__text Diana Carvajal Guevara, coreógrafa de ¿Cómo convertirse en Piedra? realizará un taller tipo laboratorio en donde se explorarán dimensiones minerales del cuerpo, siguiendo algunos elementos gatillantes y líneas de la investigación corporal realizada durante el proceso creativo de la obra.
+              .convocatoria__details__emblem-container
+                img(src="/images/single/emblem.png")
+          .col-24.col-md-18.offset-md-3
+            .convocatoria__details__content
+              p.convocatoria__details__text Como parte del programa de actividades Petrificaciones en el marco del trabajo de creación de Manuela Infante, Cómo convertirse en piedra una co-producción entre Fundación Teatro a Mil, Centro NAVE y Matucana 100, junto a Lab Escénico se realizará el Taller Movimiento Mineral.
+              p.convocatoria__details__text El taller se realizará en distintos formatos dependiendo de la fase en la que nos encontremos. En caso de estar en fase 2 el taller se realizará de manera digital a través de zoom, y en caso de estar en fase 3 y 4 se realizará en un formato híbrido donde se elegirá de manera aleatoria a los participantes que estén en el espacio físico (será con aforo limitado).
+              p.convocatoria__details__subtitle Perfil participantes
+              p.convocatoria__details__text Personas mayores de 18 con interés y motivación de realizar un trabajo de exploración corporal desde una dimensión mineral, participando en modalidad laboratorio de la búsqueda de posibilidades en sus cuerpos a partir de los elementos gatillantes de la investigación de la obra ¿Cómo convertirse en Piedra?
+              p.convocatoria__details__subtitle Biografía
+              p.convocatoria__details__nombre Diana Carvajal Guevara
+              p.convocatoria__details__text Trabajadora de las danzas, artista escénica independiente. Se moviliza sensiblemente entre la danza contemporánea, el teatro, las danzas sociales y la música. Trabaja como creadora, intérprete y coreógrafa de diversos proyectos que contemplan procesos de exploración e investigación de carácter colaborativos, colectivos e interdisciplinares, para la creación y la formación situada en el contexto y territorio.
+              .convocatoria__details__container
+                .convocatoria__details__container-label Duracion:
+                .convocatoria__details__container-text 90 minutos
+              .convocatoria__details__container
+                .convocatoria__details__container-label Lugar:
+                .convocatoria__details__container-text NAVE
+          .col-24
+            .-divider
+    section.convocatoria__fechas
+      +banner("Fechas", "#000")
+      .container
+        .row
+          .col-24
+            +itemsList(site.data.fechasConvocatoria, "convocatorias", "#fff")

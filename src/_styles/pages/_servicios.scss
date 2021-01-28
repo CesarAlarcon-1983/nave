@@ -1,0 +1,287 @@
+.servicios {
+  background: $lightestGray;
+
+  &__hero {
+    background: url('/images/convocatorias/single-hero.jpg') no-repeat center center / cover;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $black;
+      opacity: .5;
+    }
+
+    @include mq(md) {
+      padding-top: 15vh;
+    }
+
+    &__container {
+      padding: 100px 0;
+      z-index: 2;
+      position: relative;
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font-family: $heroTitleFont;
+      color: #000;
+      mix-blend-mode: screen;
+      -webkit-text-stroke: 1px $white;
+      font-size: 40px;
+      margin-bottom: 40px;
+      margin: 0;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background: url('/images/transparent.png') repeat center center;
+      
+      @include mq(md) {
+        padding-left: 10px;
+        font-size: 110px;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 20px;
+    }
+
+    &__scroll-button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+
+      .icon {
+        margin-right: 20px;
+
+        @include mq(md) {
+          margin-right: 40px;
+        }
+
+        svg {
+            @include icon(60px, 'down');
+        }
+      }
+    }
+
+    &__button {
+      display: inline-flex;
+      justify-content: center;
+      padding: 5px 20px;
+      background: $black;
+      align-items: center;
+      color: $white;
+      text-decoration: none;
+      font-size: 16px;
+      font-family: $altFont;
+      white-space: nowrap;
+      
+      .icon {
+        margin-left: 10px;
+
+        svg {
+            @include icon(30px, 'rightup');
+        }
+      }
+    }
+  }
+
+  &__details {
+    padding-top: 50px;
+
+    &__breadcrum {
+      margin-bottom: 40px;
+      ul {
+        display: flex;
+
+        li {
+          text-transform: uppercase;
+          font-family: $altFont;
+
+          &:not(:last-child) {
+            margin-right: 10px;
+            padding-right: 10px;
+            border-right: 1px solid $black;
+          }
+        }
+      }
+    }
+
+    &__content-heading {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 50px;
+
+      p {
+        font-family: $altFont;
+        font-weight: 500;
+        font-size: 20px;
+        width: 100%;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        margin: 0;
+
+        @include mq(md) {
+          font-size: 32px;
+          width: 65%;
+        }
+      }
+    }
+
+    &__emblem-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+
+      img {
+        width: 50px;
+        @include mq(md) {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    &__text {
+      font-family: $altFont;
+      letter-spacing: 2px;
+      line-height: 1.5;
+      font-size: 16px;
+      margin: 0;
+      margin-bottom: 40px;
+
+      @include mq(md) {
+        font-size: 20px;
+      }
+    }
+
+    &__subtitle {
+      font-family: $altFont;
+      letter-spacing: 2px;
+      line-height: 1.5;
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0;
+      margin-bottom: 40px;
+
+      @include mq(md) {
+        font-size: 20px;
+      }
+    }
+
+    &__nombre {
+      font-family: $altFont;
+      letter-spacing: 2px;
+      line-height: 1.5;
+      font-size: 16px;
+      margin: 0;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+
+      @include mq(md) {
+        font-size: 20px;
+      }
+    }
+
+    &__container {
+      display: flex;
+    }
+
+    &__container-label {
+      font-weight: 500;
+      font-family: $altFont;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    &__container-text {
+      font-family: $altFont;
+      font-size: 20px;
+    }
+  }
+
+  &__fechas {
+    padding-bottom: 50px;
+  }
+
+  &__contacto {
+    padding-bottom: 50px;
+
+    &__container {
+      background: $white;
+      padding: 10px 20px;
+      position: relative;
+
+      @include mq(md) {
+        padding: 20px 40px;
+      }
+    }
+  
+    &__content {
+      width: 100%;
+      margin-bottom: 30px;
+
+      @include mq(md) {
+        margin-bottom: 60px;
+      }
+    }
+  
+  
+    &__subtitle {
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 24px;
+      font-family: $heroTitleFont;
+  
+      @include mq(md) {
+        font-size: 60px;
+      }
+    }
+  
+    &__title {
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 20px;
+  
+      @include mq(md) {
+        font-size: 40px;
+      }
+    }
+
+    &__text {
+      font-family: $altFont;
+      width: 70%;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+  
+    img{
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      right: 30px;
+      bottom: 20px;
+  
+      @include mq(md) {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        right: 50px;
+        top: 20px;
+      }
+    }
+  
+  }
+  
+  .-divider {
+    margin-bottom: 20px;
+    padding-bottom: 70px;
+    border-bottom: 1px solid $black;
+  }
+}

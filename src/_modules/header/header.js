@@ -10,6 +10,14 @@ var Header = function() {
     header.toggleClass('-open');
     body.toggleClass('-hideOverflow');
   });
+
+  $(window).on('scroll', function() {
+    if(window.scrollY > 0) {
+      header.addClass('-scrolled');
+    } else {
+      header.removeClass('-scrolled');
+    }
+  })
 };
 
 module.exports = Header;

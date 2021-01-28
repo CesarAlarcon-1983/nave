@@ -7,25 +7,41 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 70px;
+    font-size: 30px;
     font-family: $heroTitleFont;
     text-transform: uppercase;
     white-space: nowrap;
+
+    @include mq(md) {
+      font-size: 70px;
+    }
 
     .icon {
       margin: 0 10px;
 
       svg {
-          @include icon(60px, 'right');
+        @include icon(30px, 'right');
+
+        @include mq(md) {
+            @include icon(60px, 'right');
+          }
       }
     }
     
     &.-top {
-      transform: translateX(-50px);
+      transform: translateX(-10px);
+
+      @include mq(md) {
+        transform: translateX(-50px);
+      }
     }
 
     &.-bottom {
-      transform: translateX(-400px);
+      transform: translateX(-200px);
+      
+      @include mq(md) {
+        transform: translateX(-400px);
+      }
     }
   }
 }

@@ -1,0 +1,265 @@
+.residencia {
+  background: $lightestGray;
+
+  &__hero {
+    background: url('/images/home/hero.jpg') no-repeat center center / cover;
+    @include mq(md) {
+      padding-top: 15vh;
+    }
+
+    &__container {
+      padding: 100px 0;
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font-family: $heroTitleFont;
+      color: #000;
+      mix-blend-mode: screen;
+      -webkit-text-stroke: 1px $white;
+      font-size: 50px;
+      margin-bottom: 40px;
+      margin: 0;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background: url('/images/transparent.png') repeat center center;
+      
+      @include mq(md) {
+        padding-left: 10px;
+        font-size: 110px;
+      }
+    }
+
+    &__text {
+      color: $white;
+      font-size: 40px;
+      text-transform: uppercase;
+      margin: 0;
+      display: inline-block;
+      position: relative;
+
+      @include mq(md) {
+        font-size: 80px;
+      }
+    }
+
+    &__wrapper {
+      @include mq(md) {
+        display: flex;
+        justify-content: space-between;
+
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 20px;
+    }
+
+    &__scroll-button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+
+      .icon {
+        margin-right: 20px;
+
+        @include mq(md) {
+          margin-right: 40px;
+        }
+
+        svg {
+            @include icon(60px, 'down');
+        }
+      }
+    }
+
+    &__button {
+      display: inline-flex;
+      justify-content: center;
+      padding: 5px 20px;
+      background: $black;
+      align-items: center;
+      color: $white;
+      text-decoration: none;
+      font-size: 16px;
+      font-family: $altFont;
+      white-space: nowrap;
+      
+      .icon {
+        margin-left: 10px;
+
+        svg {
+            @include icon(30px, 'rightup');
+        }
+      }
+    }
+
+    &__social {
+      display: flex;
+      align-items: center;
+    }
+
+    &__social-text {
+      color: $white;
+      font-family: $altFont;
+      font-size: 20px;
+    }
+
+    &__social-list {
+      display: flex;
+    }
+
+    &__social-item {
+      margin-left: 40px;
+
+      a {
+        color: $white;
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__details {
+    padding-top: 50px;
+
+    &__breadcrum {
+      margin-bottom: 40px;
+      ul {
+        display: flex;
+
+        li {
+          text-transform: uppercase;
+          font-family: $altFont;
+
+          &:not(:last-child) {
+            margin-right: 10px;
+            padding-right: 10px;
+            border-right: 1px solid $black;
+          }
+        }
+      }
+    }
+
+    &__content-heading {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      margin-bottom: 50px;
+
+      @include mq(md) {
+        flex-direction: row;
+      }
+
+      span {
+        color: $yellow;
+      }
+
+      p {
+        font-family: $altFont;
+        font-weight: 500;
+        font-size: 20px;
+        width: 100%;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        margin: 0;
+        order: 2;
+
+        @include mq(md) {
+          font-size: 32px;
+          width: 65%;
+          order: 1;
+        }
+      }
+    }
+
+    &__artist {
+      order: 1;
+      margin-bottom: 40px;
+
+      @include mq(md) {
+        order: 2;
+        margin-bottom: 0;
+      }
+    }
+
+    &__artist-avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__artist-details {
+      text-align: center;
+      width: 100%;
+    }
+
+    &__artist-title,
+    &__artist-name {
+      font-family: $altFont;
+      font-size: 18px;
+    }
+
+    &__content {
+      p {
+        font-family: $altFont;
+        letter-spacing: 2px;
+        line-height: 1.5;
+        font-size: 16px;
+
+        @include mq(md) {
+          font-size: 20px;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        margin: 50px 0;
+      }
+    }
+
+    &__group {
+      margin-bottom: 60px;
+    }
+
+    &__group-title {
+      font-family: $altFont;
+      font-weight: 500;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    &__group-text {
+      font-family: $altFont;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__fechas {
+    padding-bottom: 50px;
+  }
+  
+  .-divider {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $black;
+  
+    @include mq(md) {
+      padding-bottom: 40px;
+    }
+  }
+}

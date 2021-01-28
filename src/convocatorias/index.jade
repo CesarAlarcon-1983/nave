@@ -1,0 +1,33 @@
+include ../_modules/filter/filter
+include ../_modules/article/article
+
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+  main.convocatorias
+    section.convocatorias__hero  
+      .container
+        .row
+          .col-24
+            .convocatorias__hero__container
+              h1.convocatorias__hero__title
+                | Convo
+                br
+                | Catorias
+    section.convocatorias__eventos
+      .container
+        .row
+          .col-24
+            +filter(site.data.eventos)
+          each evento, index in site.data.convocatorias
+            .col-24.col-md-8(data-content=evento.categoria)
+                +article(evento, '-convocatoria')
+          .col-24.col-md-4.offset-md-10
+            .convocatorias__eventos__buttons
+              a.convocatorias__eventos__button(href="/convocatoria") Cargar más
+                +icon("arrow", "#fff")
+

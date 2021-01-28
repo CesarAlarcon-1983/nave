@@ -1,0 +1,39 @@
+include ../_modules/banner/banner
+include ../_modules/items-list/items-list
+
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+  main.quienes-somos
+    section.quienes-somos__hero  
+      .container
+        .row
+          .col-24
+            .quienes-somos__hero__container
+              h1.quienes-somos__hero__title
+                | Quiénes
+                br
+                | Somos
+    section.quienes-somos__details
+      .container
+        .row
+          .col-24
+            .quienes-somos__details__content
+              .quienes-somos__details__image
+                img(src="/images/quienes-somos/main.jpg")
+              .quienes-somos__details__text-container
+                p.quienes-somos__details__text NAVE es un centro de creación y residencia que tiene como misión apoyar, colaborar y nutrir los procesos de creación e investigación de las Artes Vivas –danza, performance, música, teatro y todos sus cruces imaginables–, abriendo diálogos con otras disciplinas.
+                p.quienes-somos__details__text Nos definimos como un centro de experimentación que, desde el movimiento y el cuerpo como eje, queremos reflexionar sobre las nuevas formas de hacer arte en el presente. Es nuestra prioridad facilitar el trabajo creativo y la investigación artística proporcionando un lugar, a través de los programas de residencia, para que estas prácticas se desenvuelvan y transformen.
+                p.quienes-somos__details__text Nuestro enfoque sobre el espacio trasciende el concepto de escena tradicional. Por eso, procuramos que NAVE sea un territorio versátil y en movimiento constante, de manera que se puedan expandir las posibilidades creativas.
+          .col-24.col-md-16.offset-md-4
+            .quienes-somos__details__destacado
+              p.quienes-somos__details__destacado-text Entendemos el arte y su patrimonio como fuente de experiencia, reflexión y conocimiento, razón por la cual, creemos necesaria su valoración y transmisión en la sociedad.
+    section.quienes-somos__video
+      .quienes-somos__video__container
+        img(src="/images/quienes-somos/video.jpg")
+        button.quienes-somos__video__play-button
+          img(src="/images/play-button.svg")
