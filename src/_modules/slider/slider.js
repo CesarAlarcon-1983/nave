@@ -24,7 +24,7 @@ var Slider = function() {
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 autoplay: false,
-                // centerMode: true,
+                centerMode: false,
                 responsive: [
                     {
                         breakpoint: 900,
