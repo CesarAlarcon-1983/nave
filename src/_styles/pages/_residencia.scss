@@ -176,10 +176,13 @@
     }
 
     &__artista {
-      width: 100%;
+      padding: 0 50px;
       order: 1;
+      margin-bottom: 50px;
 
       @include mq(md) {
+        margin-bottom: 0;
+        padding: 0;
         width: 20%;
         order: 2;
       }

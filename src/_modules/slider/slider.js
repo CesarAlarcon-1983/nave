@@ -58,10 +58,11 @@ var Slider = function() {
                     {
                         breakpoint: 480,
                         settings: {
+                            fade: false,
                             centerMode: false,
                             slidesToShow: 1,
                             slidesToScroll: 1,
-                            autoplay: true,
+                            autoplay: false,
                             speed: 300
                         }
                     }

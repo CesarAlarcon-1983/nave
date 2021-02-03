@@ -2,7 +2,7 @@
   background: $lightestGray;
 
   &__hero {
-    background: url('/images/home/hero.jpg');
+    background: url('/images/home/hero.jpg') no-repeat center center / cover;
 
     &__container {
       padding: 100px 0 100px 0;

@@ -47,7 +47,7 @@ block content
     section.noticia__ultimas-noticias
       +banner("últimas noticias", "#000")
       .noticia__ultimas-noticias__container
-        each article, index in site.data.convocatorias
+        each article, index in site.data.noticias
           if index < 3
             .noticia__ultimas-noticias__wrapper
               +article(article, "-convocatoria")

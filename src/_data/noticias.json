@@ -1,0 +1,65 @@
+[
+  {
+    "categoria": "Residencia virtual",
+    "titulo": "Border podcast",
+    "fechas": "10 de abril a 28 de noviembre",
+    "image": "/images/programacion/art-1.jpg",
+    "url": "/noticia"
+  },
+  {
+    "categoria": "Ciclo",
+    "titulo": "Del hexágono a chile: ciclo de danza francesa",
+    "fechas": "6 de agosto a 27 de agosto",
+    "image": "/images/programacion/art-2.jpg",
+    "url": "/noticia"
+  },
+  {
+    "categoria": "Actividad familiar",
+    "titulo": "Experiencias de contención, escucha, calma y reflexión",
+    "fechas": "24 de noviembre / 11 hrs.",
+    "image": "/images/programacion/art-3.jpg",
+    "url": "/noticia"
+  },
+  {
+    "categoria": "Conversatorio",
+    "titulo": "Conversatorio: la relación del movimiento entre la ley y la vida",
+    "fechas": "14 de octubre / 19 hrs.",
+    "image": "/images/programacion/art-4.jpg",
+    "url": "/noticia"
+  },
+  {
+    "categoria": "Lanzamiento",
+    "titulo": "Lanzamiento libro de la danza chilena",
+    "fechas": "14 de octubre / 19 hrs.",
+    "image": "/images/programacion/art-5.jpg",
+    "url": "/noticia"
+  },
+  {
+    "categoria": "Ciclo / otrosur 2019",
+    "titulo": "Otrosur 2019: funciones avasallar: acto 3 // trilogía antropofágica",
+    "fechas": "28 y 28 de septiembre / 20 hrs.",
+    "image": "/images/programacion/art-6.jpg",
+    "url": "/noticia"
+  },
+  {
+    "categoria": "Oh stgo!",
+    "titulo": "Oh stgo!: macaco press & miauru",
+    "fechas": "20 de octubre / 10 a 14 hrs.",
+    "image": "/images/programacion/art-7.jpg",
+    "url": "/noticia"
+  },
+  {
+    "categoria": "Otrosur 2019",
+    "titulo": "Otrosur 2019: funciones extraños mares arden",
+    "fechas": "30 de noviembre y 1 de diciembre / 17 hrs.",
+    "image": "/images/programacion/art-8.jpg",
+    "url": "/noticia"
+  },
+  {
+    "categoria": "Función",
+    "titulo": "A selfie concert",
+    "fechas": "23 de julio / 20 hrs.",
+    "image": "/images/programacion/art-9.jpg",
+    "url": "/noticia"
+  }
+]
