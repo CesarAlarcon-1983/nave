@@ -89,6 +89,8 @@
   }
 
   &__option {
-    color: $black;
+    color: $white;
+    background: $black;
+    padding: 10px 0;
   }
 }

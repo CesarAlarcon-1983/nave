@@ -1,26 +1,86 @@
-.newsletter {
+.descubre-mas {
   $n: &;
 
+  background: $lightGray;
+  padding: 20px 15px;
+
+  @include mq(md) {
+    padding: 40px 45px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: $altFont;
+    font-size: 40px;
+  }
+
+  &__wrapper {
+    @include mq(md) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;      
+    }
+  }
+
   &__container {
-    background: $white;
-    padding: 20px;
+    width: 100%;
     position: relative;
+    margin-bottom: 15px;
+
+    @include mq(md) {
+      margin-bottom: 0;
+      width: 23%;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, $black, 30%, transparent);
+      z-index: 2;
+    }
+  }
+
+  &__image {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
   }
 
   &__content {
     width: 100%;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    z-index: 3;
+  }
+
+  &__content-title {
+    font-size: 30px;
+    color: $white;
+    font-family: $altFont ;
+    margin: 0;
+    margin-bottom: 20px;
   }
 
   &__button {
     display: inline-flex;
     justify-content: center;
-    padding: 5px 20px;
-    background: $black;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    background: $yellow;
     align-items: center;
-    color: $white;
+    color: $black;
+    font-weight: 700;
     text-decoration: none;
     border: 1px solid $black;
-    font-size: 20px;
+    font-size: 16px;
     font-family: $altFont;
 
     .icon {
@@ -28,108 +88,6 @@
 
       svg {
         @include icon(30px, 'rightup')
-      }
-    }
-  }
-
-  &__subtitle {
-    margin: 0;
-    text-transform: uppercase;
-    font-size: 20px;
-
-    @include mq(md) {
-      font-size: 40px;
-    }
-  }
-
-  &__title {
-    margin: 0;
-    text-transform: uppercase;
-    font-size: 24px;
-    line-height: .7;
-    margin-bottom: 80px;
-    font-family: $heroTitleFont;
-
-    @include mq(md) {
-      font-size: 60px;
-    }
-  }
-
-  img{
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    right: 30px;
-    bottom: 20px;
-
-    @include mq(md) {
-      width: 70px;
-      height: 70px;
-      position: absolute;
-      right: 30px;
-      top: 20px;
-    }
-  }
-
-  &.nave-tv {
-    background: $yellow;
-    
-    #{$n}__container {
-      padding: 20px 0;
-      background: transparent;
-
-      @include mq(md) {
-        padding: 80px 0;
-      }
-    }
-
-    #{$n}__button {
-      padding: 15px 40px;
-      text-transform: uppercase;
-      font-size: 18px;
-      font-weight: 500;
-      .icon {
-        display: none;
-      }
-    }
-
-    #{$n}__subtitle {
-      font-family: $altFont;
-      color: $white;
-      font-size: 18px;
-      margin-bottom: 20px;
-
-      @include mq(md) {
-        font-size: 24px;
-      }
-    }
-
-    #{$n}__title {
-      font-family: $altFont;
-      color: $white;
-      font-size: 60px;
-      text-transform: none;
-      margin-bottom: 40px;
-
-      @include mq(md) {
-        font-size: 80px;
-      }
-    }
-
-    img {
-      width: 70px;
-      height: 70px;
-      position: absolute;
-      right: 15px;
-      bottom: 20px;
-  
-      @include mq(md) {
-        width: 170px;
-        height: 170px;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
       }
     }
   }

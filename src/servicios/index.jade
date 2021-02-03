@@ -1,6 +1,7 @@
 include ../_modules/banner/banner
 include ../_modules/items-list/items-list
 include ../_modules/article/article
+include ../_modules/icon/icon
 
 extends ../_layouts/base
 
@@ -58,7 +59,131 @@ block content
                 h2.servicios__contacto__title Que evento te gustaría realizar
               p.servicios__contacto__text Para visitarnos, consulta los precios y la disponibilidad de los espacios, escríbenos a arriendos@nave.io o llena el siguiente formulario y te contactaremos. 
             img(src="/images/emblem-icon.svg")
-
-
+        form.row
+          .col-24.col-md-8
+            .servicios__contacto__form-group
+              input.servicios__contacto__input(placeholder="Nombre empresa u organización")
+          .col-24.col-md-8
+            .servicios__contacto__form-group
+              select.servicios__contacto__select
+                option(selected hidden disabled) Tipo de evento
+                option(value="1") Tipo 1
+                option(value="2") Tipo 2
+                option(value="3") Tipo 3
+                option(value="4") Tipo 4
+                option(value="5") Tipo 5
+              +icon('arrow', '#000')
+          .col-24.col-md-8
+            .servicios__contacto__form-group
+              input.servicios__contacto__input(placeholder="Cuéntanos en que consiste el evento")
+          .col-24.col-md-8
+            .servicios__contacto__form-group
+              input.servicios__contacto__input(placeholder="Fechas ideales para hacer el evento")
+          .col-24.col-md-8
+            .servicios__contacto__form-group.servicios__contacto__form-group--calendar
+              select.servicios__contacto__select
+                option(selected hidden disabled) Horario inicio actividad
+                option(value="1") 09:00
+                option(value="2") 10:00
+                option(value="3") 11:00
+                option(value="4") 12:00
+                option(value="5") 13:00
+              +icon('calendar', '#000')
+          .col-24.col-md-8
+            .servicios__contacto__form-group.servicios__contacto__form-group--calendar
+              select.servicios__contacto__select
+                option(selected hidden disabled) Horario finalización actividad
+                option(value="1") 09:00
+                option(value="2") 10:00
+                option(value="3") 11:00
+                option(value="4") 12:00
+                option(value="5") 13:00
+              +icon('calendar', '#000')
+          .col-24.col-md-8
+            .servicios__contacto__form-group
+              input.servicios__contacto__input.servicios__contacto__input--checkbox(type="checkbox" name="montaje" id="montaje")
+              label.servicios__contacto__label(for="montaje") Día de montaje previo
+          .col-24.col-md-8
+            .servicios__contacto__form-group
+              select.servicios__contacto__select
+                option(selected hidden disabled) Días de uso
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3
+                option(value="4") 4
+                option(value="5") 5
+              +icon('arrow', '#000')
+          .col-24.col-md-8
+            .servicios__contacto__form-group
+              select.servicios__contacto__select
+                option(selected hidden disabled) Número estimado de asistentes
+                option(value="1") 09:00
+                option(value="2") 10:00
+                option(value="3") 11:00
+                option(value="4") 12:00
+                option(value="5") 13:00
+          .col-24
+            .-form-divider
+          .col-24
+            span.servicios__contacto__form-subtitle Espacios a utilizar
+          .col-24.col-md
+            .servicios__contacto__form-group
+              input.servicios__contacto__input.servicios__contacto__input--checkbox(type="checkbox" name="sala_negra" id="sala_negra")
+              label.servicios__contacto__label(for="sala_negra") Sala Negra
+          .col-24.col-md
+            .servicios__contacto__form-group
+              input.servicios__contacto__input.servicios__contacto__input--checkbox(type="checkbox" name="sala_blanca" id="sala_blanca")
+              label.servicios__contacto__label(for="sala_blanca") Sala blanca
+          .col-24.col-md
+            .servicios__contacto__form-group
+              input.servicios__contacto__input.servicios__contacto__input--checkbox(type="checkbox" name="azotea" id="azotea")
+              label.servicios__contacto__label(for="azotea") Azotea
+          .col-24.col-md
+            .servicios__contacto__form-group
+              input.servicios__contacto__input.servicios__contacto__input--checkbox(type="checkbox" name="camarin" id="camarin")
+              label.servicios__contacto__label(for="camarin") Camarin
+          .col-24.col-md
+            .servicios__contacto__form-group
+              input.servicios__contacto__input.servicios__contacto__input--checkbox(type="checkbox" name="residencia" id="residencia")
+              label.servicios__contacto__label(for="residencia") Residencia
+          .col-24.col-md
+            .servicios__contacto__form-group
+              input.servicios__contacto__input.servicios__contacto__input--checkbox(type="checkbox" name="sala1" id="sala1")
+              label.servicios__contacto__label(for="sala1") Sala 1
+          .col-24.col-md
+            .servicios__contacto__form-group
+              input.servicios__contacto__input.servicios__contacto__input--checkbox(type="checkbox" name="sala2" id="sala2")
+              label.servicios__contacto__label(for="sala2") Sala 2
+          .col-24
+            .-form-divider
+          .col-24
+            span.servicios__contacto__form-subtitle Espacios extra
+          .col-24.col-md-4
+            .servicios__contacto__form-group
+              input.servicios__contacto__input.servicios__contacto__input--checkbox(type="checkbox" name="catering" id="catering")
+              label.servicios__contacto__label(for="catering") Catering
+          .col-24.col-md-4
+            .servicios__contacto__form-group
+              input.servicios__contacto__input.servicios__contacto__input--checkbox(type="checkbox" name="servicio" id="servicio")
+              label.servicios__contacto__label(for="servicio") Zona de servicio
+          .col-24.col-md-4
+            .servicios__contacto__form-group
+              input.servicios__contacto__input.servicios__contacto__input--checkbox(type="checkbox" name="estacionamiento" id="estacionaiento")
+              label.servicios__contacto__label(for="estacionaiento") Estacionaiento
+          .col-24
+            .-form-divider
+          .col-24.col-md-8
+            .servicios__contacto__form-group
+              input.servicios__contacto__input(placeholder="Nombre persona que cotiza")
+          .col-24.col-md-8
+            .servicios__contacto__form-group
+              input.servicios__contacto__input(placeholder="e-mail" type="email")
+          .col-24.col-md-8
+            .servicios__contacto__form-group
+              input.servicios__contacto__input(placeholder="teléfono" type="number")
+          .col-24.col-md-4.offset-md-20
+            .servicios__contacto__form-group.servicios__contacto__form-group--button
+              button.servicios__contacto__submit(type="submit") Enviar
+                +icon('arrow', '#fff')
 
 

@@ -1,0 +1,53 @@
+include ../_modules/banner/banner
+include ../_modules/article/article
+
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+  main.noticia
+    section.noticia__hero  
+      .container
+        .row
+          .col-24
+            .noticia__hero__container
+              h1 Noticias
+              p
+                | ¿Cómo se seleccionan los
+                br
+                |artistas que entran a nave?
+              .noticia__hero__buttons
+                button.noticia__hero__scroll-button
+                  +icon("arrow", "#fff")
+    section.noticia__details
+      .container
+        .row
+          .col-24
+            .noticia__details__breadcrumb
+              ul
+                li 13 de noviembre 2020
+            .noticia__details__content-heading
+              p Muchos nos consultan sobre cómo es el proceso de selección de artistas para programar al interior del espacio, y qué es lo que define a un artista NAVE.
+              .noticia__details__emblem-container
+                img(src="/images/single/emblem.png")
+          .col-24.col-md-18.offset-md-3
+            .noticia__details__content
+              p Para esto, primero es importante establecer cómo funcionan las lógicas dentro del espacio. De manera anual, el enfoque de nuestra programación se basa en el apoyo a los procesos creativos, conocidos como residencias, espacio donde los artistas tienen la posibilidad de experimentar e investigar sin importar la fase de creación en la que se encuentre. Es decir, propiciar un lugar de ensayo y error al interior de nuestra casa que cuenta con salas de trabajo y la residencia misma que alberga a artistas internacionales y de otras partes de Chile que no sean la capital.
+              p ¿Cómo entonces un artista se hace parte de esta programación? Nuestro método de selección más común y abierto, es el de la Convocatoria Nacional e Internacional Artes Vivas que hasta este 2020, se abría de manera anual en la fecha de nuestro aniversario, entre septiembre y noviembre de cada año. Desde que se abrió la convocatoria, recibimos al rededor de 200 propuestas por año de las cuáles seleccionamos entre 15 y 20 artistas. Esta cifra se debe a que debemos programar en los espacios disponibles a creadores que trabajan entre 2 a 4 semanas en NAVE en sus residencias de creación o residencias técnicas (en nuestra Sala Negra de la mano del equipo técnico).
+              p La segunda línea curatorial que contemplamos son los programas de residencia cruzadas, las cuales son uniones con instituciones para apoyar a artistas locales e internacionales para desarrollar residencias en dos o más lugares, entre ellos NAVE. Y la tercera, tiene que ver específicamente con la necesidad de continuar apoyando procesos de nuestro interés para que el artista que ya ha pasado por NAVE después de su primera residencia tenga la posibilidad de continuar profesionalizándose y buscando nuevas herramientas al interior del espacio, a medida que su proyecto va mutando, evolucionando y re-significándose. Por lo mismo, este 2020 se instauró la idea de Artistas Asociados NAVE, instancia donde por primera vez una institución se compromete al apoyo por 3 años de creadores ya sea con la gestión, co-producción o el uso del espacio.
+              img(src="/images/noticias/noticia-1.jpg")
+              p Muchos nos escriben cada año para programar obras y funciones al interior de NAVE para disponer del espacio, sin embargo como nuestra primera misión es la de dar un espacio para la residencia sin la necesidad de generar productos es que se le da prioridad a los procesos artísticos más que a las lógicas exhibitivas. Generalmente la programación para funciones van de la mano de un Ciclo específico donde se abre la posibilidad de trabajar en la creación de una obra de la mano de talleres, laboratorios e instancias de diálogo.
+              p Este 2020, debido a la pandemia tuvimos que re-programar muchas de las residencias que teníamos contempladas y por lo mismo, no se abrió la Convocatoria Artes Vivas, no obstante a través de nuestros talleres y laboratorios los artistas invitan a la comunidad artística y ciudadana a ser parte de procesos de creación, como es el caso de TRASCENDENTAL de Jose Vidal, el cual realizará una apertura y una función de lo que salga del taller.
+              p De todas maneras, atento a nuestras redes para nuevas convocatorias que tendrán como finalidad apoyar el trabajo local y continuar profesionalizando las Artes Vivas y la Danza.
+      .-divider-container
+        .-divider
+    section.noticia__ultimas-noticias
+      +banner("últimas noticias", "#000")
+      .noticia__ultimas-noticias__container
+        each article, index in site.data.convocatorias
+          if index < 3
+            .noticia__ultimas-noticias__wrapper
+              +article(article, "-convocatoria")

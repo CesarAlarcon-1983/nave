@@ -1,0 +1,109 @@
+.player {
+  @include trans;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2000;
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  &.-visible {
+    opacity: 1;
+    z-index: 2000;
+    pointer-events: all;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: $black;
+    opacity: .95;
+  }
+  
+  &__container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.5%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+
+  &__close-button {
+    height: 40px;
+    width: 40px;
+    background: $yellow;
+    border: 1px solid $yellow;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    z-index: 2001;
+
+    @include mq(md) {
+      height: 70px;
+      width: 70px;
+      right: 40px;
+      top: 40px;
+      }
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 50%;
+      width: 2px;
+      background: $white;
+
+      &:nth-child(1) {
+        transform: translate3d(-50%, -50%, 0) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+      }
+    }
+  }
+
+  &__error-message {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: $altFont;
+    width: 80%;
+
+    &.-visible  {
+      display: block;
+      color: $white;
+      font-size: 50px;
+    }
+  }
+}

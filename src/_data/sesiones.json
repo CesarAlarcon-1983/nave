@@ -1,0 +1,41 @@
+[
+  {
+    "titulo": "Sentido",
+    "texto": "¿Qué sentido tiene hoy nuestro trabajo como artistas y programadores en la sociedad?",
+    "fecha": {
+      "mes": "08",
+      "dia":"09",
+      "ano": "2020"
+    },
+    "horas": [
+      "11:30 Chile / 10:30 Colombia",
+      "15:30 Portugal / 16:30 EU"
+    ]
+  },
+  {
+    "titulo": "Conserver y abandonar",
+    "texto": "¿Qué cosas debemos conservar y sostener en nuestras prácticas y ha dejado de tener sentido y hemos de abandonar por siempre?",
+    "fecha": {
+      "mes": "06",
+      "dia":"10",
+      "ano": "2020"
+    },
+    "horas": [
+      "11:30 Chile / 10:30 Colombia",
+      "15:30 Portugal / 16:30 EU"
+    ]
+  },
+  {
+    "titulo": "Desafíos",
+    "texto": "¿Cómo abordar juntos (Artistas y programadores) los desafíos económicos, ecológicos, pandémicos, etc que afectan a la creación y su continuidad?",
+    "fecha": {
+      "mes": "03",
+      "dia":"11",
+      "ano": "2020"
+    },
+    "horas": [
+      "11:30 Chile / 10:30 Colombia",
+      "15:30 Portugal / 16:30 EU"
+    ]
+  }
+]

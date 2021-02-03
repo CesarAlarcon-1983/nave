@@ -1,0 +1,83 @@
+.noticias {
+  background: $lightestGray;
+
+  &__hero {
+    background: url('/images/home/hero.jpg');
+
+    &__container {
+      padding: 100px 0 100px 0;
+
+      @include mq(md) {
+        padding: 200px 0 100px 0;
+      }
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font-family: $heroTitleFont;
+      color: #000;
+      mix-blend-mode: screen;
+      -webkit-text-stroke: 1px $white;
+      font-size: 40px;
+      margin-bottom: 40px;
+      margin: 0;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background: url('/images/transparent.png') repeat center center;
+      
+      @include mq(md) {
+        padding-left: 10px;
+        font-size: 110px;
+      }
+    }
+  }
+
+  &__articles {
+    padding: 50px 0;
+
+    &__destacado {
+      // padding-bottom: 10px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid $black;
+
+      @include mq(md) {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+      }
+    }
+
+    &__button {
+      display: flex;
+      justify-content: center;
+      padding: 5px 20px;
+      background: $black;
+      align-items: center;
+      color: $white;
+      text-decoration: none;
+      font-size: 16px;
+      font-family: $altFont;
+      white-space: nowrap;
+
+      .icon {
+        margin-left: 10px;
+
+        svg {
+            @include icon(30px, 'rightup');
+        }
+      }
+    }
+  }
+
+  &__calendario {
+    padding-bottom: 50px;
+
+    .banner {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__newsletter {
+    padding-bottom: 50px;
+  }
+}

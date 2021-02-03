@@ -1,0 +1,79 @@
+[
+  {
+    "nombre": "Daniel Maribolí",
+    "avatar": "/images/convocatorias/convocatoria-1.jpg",
+    "residencias": [
+      {
+        "categoria": "Residencia Virtual",
+        "fechas": "Septiembre a noviembre 2020",
+        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
+        "image": "/images/programacion/art-1.jpg"
+      }
+    ]
+  },  
+  {
+    "nombre": "Pepo Urrea Silva",
+    "avatar": "/images/convocatorias/convocatoria-1.jpg",
+        "residencias": [
+      {
+        "categoria": "Residencia Virtual",
+        "fecha": "Septiembre a noviembre 2020",
+        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
+        "image": "/images/programacion/art-1.jpg"
+      }
+    ]
+
+  },
+  {
+    "nombre": "Pepa Ubera",
+    "avatar": "/images/convocatorias/convocatoria-1.jpg",
+        "residencias": [
+      {
+        "categoria": "Residencia Virtual",
+        "fecha": "Septiembre a noviembre 2020",
+        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
+        "image": "/images/programacion/art-1.jpg"
+      }
+    ]
+
+  },
+  {
+    "nombre": "Jose Luis Vidal",
+    "avatar": "/images/convocatorias/convocatoria-1.jpg",
+        "residencias": [
+      {
+        "categoria": "Residencia Virtual",
+        "fecha": "Septiembre a noviembre 2020",
+        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
+        "image": "/images/programacion/art-1.jpg"
+      }
+    ]
+
+  },
+  {
+    "nombre": "Bolgeri + Marin",
+    "avatar": "/images/convocatorias/convocatoria-1.jpg",
+        "residencias": [
+      {
+        "categoria": "Residencia Virtual",
+        "fecha": "Septiembre a noviembre 2020",
+        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
+        "image": "/images/programacion/art-1.jpg"
+      }
+    ]
+
+  },
+  {
+    "nombre": "Call Your Mom",
+    "avatar": "/images/convocatorias/convocatoria-1.jpg",
+        "residencias": [
+      {
+        "categoria": "Residencia Virtual",
+        "fecha": "Septiembre a noviembre 2020",
+        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
+        "image": "/images/programacion/art-1.jpg"
+      }
+    ]
+
+  }
+]

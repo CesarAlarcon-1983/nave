@@ -7,7 +7,11 @@ mixin article(data, klass)
       if data.inscripcion
         .article__inscripcion Abierta
     .article__content
-      .article__category=data.categoria
-      .article__date=data.fechas
-      .article__title=data.titulo
+      if data.categoria
+        .article__category=data.categoria
+      if data.fechas
+        .article__date=data.fechas
+      if data.titulo
+        .article__title=data.titulo
+      if data.descripcion
       .article__description=data.descripcion

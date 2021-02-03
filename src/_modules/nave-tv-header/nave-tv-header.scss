@@ -12,7 +12,7 @@
     height: 10vh;
 
     @include mq(md) {
-        height: 15vh;
+        height: 115px;
     }
 
     &__container {
@@ -24,7 +24,7 @@
         
         @include mq(md) {
             padding: 20px 0;
-            height: 15vh;
+            height: 115px;
         }
     }
 
@@ -90,7 +90,7 @@
     &__nav-button {
         display: flex;
         justify-content: center;
-        padding: 5px 20px;
+        padding: 0px 15px;
         background: $yellow;
         align-items: center;
         color: $white;
@@ -144,7 +144,8 @@
             text-decoration: none;
             font-size: 26px;
             font-family: $altFont;
-
+            font-weight: 700;
+            
             @include mq(md) {
                 font-size: 14px;
             }

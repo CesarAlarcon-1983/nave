@@ -1,18 +1,17 @@
-.programa {
+.artista {
   background: $lightestGray;
 
   &__hero {
     background: url('/images/home/hero.jpg') no-repeat center center / cover;
-  
     @include mq(md) {
       padding-top: 15vh;
     }
 
     &__container {
-      padding: 100px 0;
+      padding: 100px 0 50px 0;
     }
 
-    h1 {
+    &__title {
       text-transform: uppercase;
       font-family: $heroTitleFont;
       color: #000;
@@ -32,7 +31,7 @@
       }
     }
 
-    p {
+    &__text {
       color: $white;
       font-size: 40px;
       text-transform: uppercase;
@@ -42,6 +41,14 @@
 
       @include mq(md) {
         font-size: 80px;
+      }
+    }
+
+    &__wrapper {
+      @include mq(md) {
+        display: flex;
+        justify-content: space-between;
+
       }
     }
 
@@ -57,7 +64,11 @@
       cursor: pointer;
 
       .icon {
-        margin-right: 40px;
+        margin-right: 20px;
+
+        @include mq(md) {
+          margin-right: 40px;
+        }
 
         svg {
             @include icon(60px, 'down');
@@ -85,33 +96,42 @@
         }
       }
     }
+
+    &__social {
+      display: flex;
+      align-items: center;
+    }
+
+    &__social-text {
+      color: $white;
+      font-family: $altFont;
+      font-size: 20px;
+    }
+
+    &__social-list {
+      display: flex;
+    }
+
+    &__social-item {
+      margin-left: 40px;
+
+      a {
+        color: $white;
+        font-size: 24px;
+      }
+    }
   }
 
   &__details {
     padding-top: 50px;
 
-    &__breadcrum {
-      margin-bottom: 40px;
-      ul {
-        display: flex;
-
-        li {
-          text-transform: uppercase;
-          font-family: $altFont;
-
-          &:not(:last-child) {
-            margin-right: 10px;
-            padding-right: 10px;
-            border-right: 1px solid $black;
-          }
-        }
-      }
-    }
-
     &__content-heading {
       display: flex;
       justify-content: space-between;
       margin-bottom: 50px;
+
+      @include mq(md) {
+      }
 
       p {
         font-family: $altFont;
@@ -123,7 +143,7 @@
         margin: 0;
 
         @include mq(md) {
-          font-size: 32px;
+          font-size: 30px;
           width: 65%;
         }
       }
@@ -133,15 +153,18 @@
       display: flex;
       align-items: flex-start;
       justify-content: flex-end;
+      width: 35%;
 
       img {
         width: 50px;
+
         @include mq(md) {
-          width: 100%;
+          width: 120px;
           height: auto;
         }
       }
     }
+
 
     &__content {
       p {
@@ -154,22 +177,102 @@
           font-size: 20px;
         }
       }
+    }
+  }
 
-      img {
-        width: 100%;
-        height: auto;
-        margin: 50px 0;
+  &__residencias {
+    @include mq(md) {
+      padding-bottom: 50px;
+    }
+
+    &__container {
+      width: calc(100% - 30px);
+      margin-left: auto;
+      margin-right: auto;
+      border-bottom: 1px solid $black;
+      
+      @include mq(md) {
+        padding-bottom: 40px;
+        padding-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: calc(100% - 90px);
+      }
+    }
+
+    &__wrapper {
+      width: 100%;
+      
+      @include mq(md) {
+        padding: 0 20px;
+        width: 30%;
       }
     }
   }
 
-  &__fechas {
-    padding-bottom: 50px;
+  &__otros-artistas {
+    padding-bottom: 40px;
+
+    &__container {
+      width: calc(100% - 30px);
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 50px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid $black;
+  
+      @include mq(md) {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        width: calc(100% - 90px);
+      }
+    }
+
+    &__wrapper {
+      width: 100%;
+      padding: 0 60px;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+      
+      @include mq(md) {
+        padding: 0 20px;
+
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .artista-module {
+      &__title,
+      &__name {
+        color: $black;
+      }
+    }
   }
   
+  .-divider-container {
+    width: calc(100% - 30px);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(md) {
+      width: calc(100% - 90px);
+    }
+  }
+
   .-divider {
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid $black;
+  
+    @include mq(md) {
+      padding-bottom: 40px;
+    }
   }
 }

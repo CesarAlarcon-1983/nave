@@ -1,0 +1,228 @@
+.noticia {
+  background: $lightestGray;
+
+  &__hero {
+    background: url('/images/noticias/noticia-1.jpg') no-repeat center center / cover;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(to right, $black, 50%, transparent);
+    }
+    @include mq(md) {
+      padding-top: 15vh;
+    }
+
+    &__container {
+      padding: 100px 0;
+      z-index: 2;
+      position: relative;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      font-family: $heroTitleFont;
+      color: #000;
+      mix-blend-mode: screen;
+      -webkit-text-stroke: 1px $white;
+      font-size: 40px;
+      margin-bottom: 40px;
+      margin: 0;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background: url('/images/transparent.png') repeat center center;
+      
+      @include mq(md) {
+        padding-left: 10px;
+        font-size: 110px;
+      }
+    }
+
+    p {
+      color: $white;
+      font-size: 40px;
+      text-transform: uppercase;
+      margin: 0;
+      display: inline-block;
+      position: relative;
+
+      @include mq(md) {
+        font-size: 80px;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 20px;
+    }
+
+    &__scroll-button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+
+      .icon {
+        margin-right: 40px;
+
+        svg {
+            @include icon(60px, 'down');
+        }
+      }
+    }
+  }
+
+  &__details {
+    padding-top: 50px;
+
+    &__breadcrumb {
+      margin-bottom: 40px;
+
+      ul {
+        display: flex;
+
+        li {
+          text-transform: uppercase;
+          font-family: $altFont;
+          color: $darkGray;
+          font-size: 12px;
+          white-space: nowrap;
+
+          &:not(:last-child) {
+            margin-right: 5px;
+            padding-right: 5px;
+            border-right: 1px solid $darkGray;
+          }
+
+          @include mq(md) {
+            font-size: 14px;
+
+            &:not(:last-child) {
+              margin-right: 10px;
+              padding-right: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    &__content-heading {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 50px;
+
+      p {
+        font-family: $altFont;
+        font-weight: 500;
+        font-size: 20px;
+        width: 100%;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        margin: 0;
+
+        @include mq(md) {
+          font-size: 32px;
+          width: 75%;
+        }
+      }
+    }
+
+    &__emblem-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      width: 20%;
+
+      img {
+        width: 50px;
+
+        @include mq(md) {
+          width: 50%;
+          height: auto;
+        }
+      }
+    }
+
+    &__content {
+      p {
+        font-family: $altFont;
+        letter-spacing: 2px;
+        line-height: 1.5;
+        font-size: 16px;
+
+        @include mq(md) {
+          font-size: 20px;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        margin: 50px 0;
+      }
+    }
+  }
+
+  &__ultimas-noticias {
+    padding-bottom: 50px;
+
+    &__container {
+      width: calc(100% - 30px);
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 50px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid $black;
+  
+      @include mq(md) {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        width: calc(100% - 90px);
+      }
+    }
+
+    &__wrapper {
+      width: 100%;
+      padding: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+      
+      @include mq(md) {
+        padding: 0 10px;
+
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .-divider-container {
+    width: calc(100% - 30px);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(md) {
+      width: calc(100% - 90px);
+    }
+  }
+
+  .-divider {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $black;
+  
+    @include mq(md) {
+      padding-bottom: 40px;
+    }
+  }
+}

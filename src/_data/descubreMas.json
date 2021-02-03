@@ -1,0 +1,18 @@
+[
+  {
+    "titulo": "Conversatorios",
+    "image": "/images/nave-tv/conversatorios.jpg"
+  },
+  {
+    "titulo": "Documentales",
+    "image": "/images/nave-tv/documentales.jpg"
+  },
+  {
+    "titulo": "Serie Retratos",
+    "image": "/images/nave-tv/retratos.jpg"
+  },
+  {
+    "titulo": "Teaser",
+    "image": "/images/nave-tv/teaser.jpg"
+  }
+]

@@ -1,5 +1,6 @@
 include ../_modules/banner/banner
-include ../_modules/items-list/items-list
+include ../_modules/artista-module/artista-module
+include ../_modules/article/article
 
 extends ../_layouts/base
 
@@ -8,51 +9,51 @@ block config
   - var baseUrl = '../';
 
 block content
-  main.programa
-    section.programa__hero  
+  main.artista
+    section.artista__hero  
       .container
         .row
           .col-24
-            .programa__hero__container
-              h1
-                | Ciclo
-                br
-                | Vitales
-              p
-                | Encuentro de solos
-                br
-                |Nave-sala de máquinas
-              .programa__hero__buttons
-                button.programa__hero__scroll-button
-                  +icon("arrow", "#fff")
-                a.programa__hero__button(href="#") Comprar entradas
-                  +icon("arrow", "#fff")
-    section.programa__details
+            .artista__hero__container
+              h1.artista__hero__title Artista
+              p.artista__hero__text Daniel Maribolí
+              .artista__hero__wrapper
+                .artista__hero__buttons
+                  button.artista__hero__scroll-button
+                    +icon("arrow", "#fff")
+                .artista__hero__social
+                  p.artista__hero__social-text Compartir
+                  ul.artista__hero__social-list
+                    li.artista__hero__social-item
+                      a(href="#")
+                        i.fa.fa-facebook
+                    li.artista__hero__social-item
+                      a(href="#")
+                        i.fa.fa-twitter
+    section.artista__details
       .container
         .row
           .col-24
-            .programa__details__breadcrum
-              ul
-                li Ciclo vitales
-                li Encuentro
-                li NAVE
-                li Sala de máquinas
-            .programa__details__content-heading
-              p Como parte de los fondos de emergencia adjudicados del Ministerio de las Culturas, las Artes y el Patrimonio en Noviembre se dará inicio al Ciclo Vitales, encuentro de solos de NAVE junto a Sala de Máquinas.
-              .programa__details__emblem-container
+            .artista__details__content-heading
+              p.artista__details__content-text Daniel Maraboli Bernales estudió actuación teatral en la Universidad de Chile y es Licenciado en Artes escénicas de la Universidad Mayor.
+              .artista__details__emblem-container
                 img(src="/images/single/emblem.png")
+
           .col-24.col-md-18.offset-md-3
-            .programa__details__content
-              p Este ciclo nace de la intención de enmarcar el cuerpo como un espacio de resistencia, de reflexión y la vez de creación, trata de un ejercicio que ronda el concepto de la incertidumbre en torno al estar, al crear, al compartir la experiencia dancística y escénica, Nace también de la urgencia de revivir el hábitat donde las artes vivas acostumbran desenvolverse.
-              p Se propone un tránsito por la caja negra del espacio de Nave, donde los artistas de la escena en relación con la cámara, la luz y el sonido buscarán resolver de manera casi espontánea su práctica, generando de este encuentro un espacio sensible para develar la interioridad de estos artistas, este espacio será registrado y trasmitido en vivo a través de las plataformas de NAVE.
-              img(src="/images/single/main.jpg")
-              p Este ciclo es una colaboración junto a  Salas de Máquinas que surgió a propósito de un diálogo durante la cuarentena, que quisimos transportar a la escena como gesto de nuestro interés de continuar nuestra labor de gestores y propulsores de las artes vivas, a la vez de proponer una instancia de acercamiento de la danza y el movimiento hacia la audiencia y de otorgarle al intérprete/creador la posibilidad de volver a su práctica escénica.
-              p Para esta propuesta se han determinado 3 fechas de exhibición de los solos donde se estrenará a través de nuestro Youtube el trabajo de dos coreógrafos e intérpretes a las 19 hrs. en una curatoría entre NAVE y Sala de máquinas donde seleccionó a Nuri Gutes, Pablo Zamorano, Ninoska Soto, Carolina Cifras, Carla Bolgueri y  Andrés Salazar para presentar sus propuestas. La transmisión dura 40 minutos.
-          .col-24
-            .-divider
-    section.programa__fechas
-      +banner("Fechas", "#000")
-      .container
-        .row
-          .col-24
-            +itemsList(site.data.fechas, "programas", "#fff")
+            .artista__details__content
+              p.artista__details__text Desde 2006, formador artístico impartiendo como docente diferentes cátedras en diversas instituciones académicas formadoras de artistas, configurándose en un docente que promueve la investigación y experimentación de nuevos formatos de creación escénica y performática.
+              p.artista__details__text Desde 2001 a la fecha ha compuesto el diseño musical y/o sonoro de 100 montajes de la escena nacional trabajando con directores como: Manuela Infante, Aliocha de la Sotta, Ana Harcha, Paula Aros Gho, Ana Luz Ormazábal, María Siebald, Juan Peragallo, Víctor Carrasco, Rodrigo Pérez, Néstor Cantillana, entre muchos otros. Como actor destaca sus colaboraciones para la compañía Teatro de Chile en sus montajes NARCISO, CRISTO y MULTICANCHA, dirigidos por Manuela Infante. Ha participado como músico intérprete y creador de los proyectos musicales ALAMEDAS y  FERNANDO MILAGROS y actualmente forma parte de la banda BAHÍA INÚTIL.
+              p.artista__details__text Ha sido asistente musical de partituras del diseñador teatral y règie Pablo Núñez para las óperas Tosca, Carmen, Thäis y La Traviata. A partir de 2009, cuando comienza a dirigir, ha ido desarrollando metodologías de creación escénica que se fundan en los mecanismos sonoros y musicales: OSAMA (2009), EVEREST (2012), EL LUGAR COMÚN (2014), ESCUADRÓN REMIX (2015), EL SONIDO NATURAL DE LA ESCENA DE AMOR (2017). Su investigación desde 2012 se ha basado en proponer nuevos y diversos formatos de creación escénica, en adición con profundizar la creación técnica y sonora por medio del sonido de la voz, las tecnologías y los dispositivos musicales. Ese mismo año genera su más importante alianza creativa junto a la artista Trinidad Piriz de la que se desprenden sus creaciones: HELEN BROWN (2012), TEATRONACIONAL (2013), ITHACA (2015), FIN (2017) y CORO (2019); además del seminario de formación impartido a profesionales y aficionados titulado EL SONIDO Y EL ADENTRO, el cual ha sido impartido dentro y fuera de Chile.
+      .-divider-container
+        .-divider
+    section.artista__residencias
+      .artista__residencias__container
+        .artista__residencias__wrapper
+          +article(site.data.artistas[0].residencias[0], '-convocatoria')
+    section.artista__otros-artistas
+      +banner("Otros Artistas", "#000")
+      .artista__otros-artistas__container
+        each artista, index in site.data.artistas
+          if index != 0
+            .artista__otros-artistas__wrapper
+              +artista-module(artista)

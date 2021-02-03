@@ -1,0 +1,47 @@
+include ../artista-module/artista-module
+include ../banner/banner
+
+mixin artista-page(data, artistas)
+  .artista-page
+    .artista-page__container
+      .artista-page__artista-wrapper
+        .artista-page__artista-image
+          img(src=data.avatar)
+          .artista-page__artista-name=data.nombre
+          .artista-page__social
+            .artista-page__social-title Compartir
+            ul.artista-page__social-list
+              li.artista-page__social-item
+                a(href="")
+                  i.fa.fa-facebook
+              li.artista-page__social-item
+                a(href="")
+                  i.fa.fa-twitter
+        .artista-page__artista-bio
+          each paragraph in data.text
+            p.artista-page__artista-text=paragraph
+      .artista-page__details-wrapper
+        .artista-page__details-group
+          .artista-page__details-title Apoyado por
+          .artista-page__details-logo
+            img(src="/images/logo-simple.png")
+        .artista-page__details-group
+          .artista-page__details-title Etiquetas
+          ul.artista-page__details-tags
+            each etiqueta in data.etiquetas
+              li.artista-page__details-tag=etiqueta
+        .artista-page__details-group
+          .artista-page__details-title Proceso
+          ul.artista-page__details-procesos
+            each proceso in data.procesos
+              li.artista-page__details-proceso=proceso
+
+    .artista-page__otros-artistas
+      +banner('otros artistas', '', '#fff')
+      .artista-page__otros-artistas__container
+        each artista, index in artistas
+          if index < 4
+            .artista-page__otros-artistas__wrapper(data-target=artista.nombre)
+              +artista-module(artista, 'tacto')
+    .-divider-container-artistas
+      .-divider-artistas

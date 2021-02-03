@@ -1,0 +1,64 @@
+include ../_modules/slider/slider
+include ../_modules/article/article
+include ../_modules/newsletter/newsletter
+include ../_modules/descubre-mas/descubre-mas
+include ../_modules/player/player
+
+extends ../_layouts/nave-tv
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+  main.episodio
+    section.episodio__hero  
+      .container
+        .row
+          .col-24
+            .episodio__hero__container
+              h3.episodio__hero__subtitle Ciclo de solos
+              h2.episodio__hero__title Ciclo Vitales 3
+              .episodio__hero__buttons
+                button.episodio__hero__button.episodio__hero__button--yellow.-js-player(data-src="https://www.youtube.com/watch?v=toJI5pNfsm8")
+                  +icon("play", "#000")
+                  |Reproducir
+    section.episodio__description
+      .container
+        .row
+          .col-24.col-md-13.offset-md-3
+            .episodio__description__container
+              p.episodio__description__text
+
+          .col-24.col-md-7.offset-md-1
+            .episodio__description__container
+              span.episodio__description__crew Dirección: María José Cifuentes
+              span.episodio__description__crew Guión: Andrea Ocampo
+              span.episodio__description__crew Cámara y edición: Fernanda Ruiz
+              span.episodio__description__crew Imágenes: Mila Ercoli
+
+    section.episodio__related
+      .container
+        .row
+          .col-24
+            h3.episodio__related__title Otros episodios
+            .episodio__related__container
+              .episodio__related__image
+                img(src="/images/nave-tv/solos-2.jpg")
+              .episodio__related__content
+                h4.episodio__related__content-title Ciclos Vitales 2
+                p.episodio__related__content-text
+
+            .episodio__related__container
+              .episodio__related__image
+                img(src="/images/nave-tv/solos-3.jpg")
+              .episodio__related__content
+                h4.episodio__related__content-title Ciclos Vitales 2
+                p.episodio__related__content-text
+
+    section.episodio__descubre-mas
+      +descubre-mas(site.data.descubreMas)
+    section.episodio__newsletter
+      +newsletter('nave-tv')
+
+  +player()

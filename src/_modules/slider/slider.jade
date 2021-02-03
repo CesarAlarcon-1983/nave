@@ -3,7 +3,11 @@ mixin slider(klass, mode)
         ._slidermulti(class=klass)
             if block
                 block
-    else
+    if mode == 'thumbnail'
+        ._thumbnails(class=klass)
+            if block
+                block
+    if mode == 'normal'
         ._slider(class=klass)
             if block
                 block

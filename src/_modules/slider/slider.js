@@ -1,26 +1,80 @@
 'use strict';
 
+const { speed } = require("jquery");
+
 // Constructor
 var Slider = function() {
     var slider = $('._slider');
     var sliderMulti = $('._slidermulti');
-    if (slider) {
-        slider.each(function(){
+    var thumbnails = $('._thumbnails');
+
+    if(thumbnails) {
+        thumbnails.each(function(){
             $(this).slick({
-                dots: true,
-                fade: true,
-                arrows:  true,
-                autoplay: true
+                // fade: true,
+                arrows: false,
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                initialSlide: 1,
+                responsive: [
+                    {
+                        breakpoint: 900,
+                        settings: {
+                            centerMode: false,
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            centerMode: false,
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    }
+                ]
             });
         });
     }
-    if (sliderMulti) {
+    if(slider) {
+        slider.each(function(){
+            $(this).slick({
+                dots: false,
+                fade: true,
+                arrows:  true,
+                autoplay: false,
+                infinite: true,
+                responsive: [
+                    {
+                        breakpoint: 900,
+                        settings: {
+                            centerMode: false,
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            centerMode: false,
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            autoplay: true,
+                            speed: 300
+                        }
+                    }
+                ]
+            });
+        });
+    }
+    if(sliderMulti) {
         sliderMulti.each(function(){
             $(this).slick({
                 dots: false,
                 arrows: true,
                 infinite: false,
-                // speed: 300,
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 autoplay: false,

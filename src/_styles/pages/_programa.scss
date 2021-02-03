@@ -75,6 +75,7 @@
       font-size: 16px;
       font-family: $altFont;
       white-space: nowrap;
+      font-weight: 700;
       
       .icon {
         margin-left: 10px;
@@ -98,17 +99,18 @@
         li {
           text-transform: uppercase;
           font-family: $altFont;
+          color: $darkGray;
           font-size: 12px;
           white-space: nowrap;
 
           &:not(:last-child) {
             margin-right: 5px;
             padding-right: 5px;
-            border-right: 1px solid $black;
+            border-right: 1px solid $darkGray;
           }
 
           @include mq(md) {
-            font-size: 16px;
+            font-size: 14px;
 
             &:not(:last-child) {
               margin-right: 10px;

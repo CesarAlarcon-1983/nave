@@ -1,6 +1,8 @@
 include ../_modules/slider/slider
 include ../_modules/article/article
 include ../_modules/newsletter/newsletter
+include ../_modules/descubre-mas/descubre-mas
+include ../_modules/player/player
 
 extends ../_layouts/nave-tv
 
@@ -11,22 +13,31 @@ block config
 block content
   main.nave-tv
     section.nave-tv__hero  
-      .container
-        .row
-          .col-24
-            .nave-tv__hero__container
-              h3.nave-tv__hero__subtitle Ciclo de solos
-              h2.nave-tv__hero__title Ciclo Vitales 3
-              p.nave-tv__hero__text Una invitacion a sumergirse en la oscuridad y el juego de luces y sonidos que propone el espacio
-              .nave-tv__hero__buttons
-                a.nave-tv__hero__button.nave-tv__hero__button--yellow(href="#")
-                  +icon("play", "#000")
-                  |Reproducir
-                a.nave-tv__hero__button(href="#") Información
+      .nave-tv__hero__container
+        .slider-controls
+          .-js-arrow-prev
+          .-js-arrow-next
+        +slider('nave-tv__hero__slider', 'normal')
+          each episodio in site.data.episodios.ciclo_solos
+            .nave-tv__hero__slide
+              img(src=episodio.image)
+              .nave-tv__hero__slide-content
+                h3.nave-tv__hero__subtitle Ciclo de solos
+                h2.nave-tv__hero__title=episodio.titulo
+                p.nave-tv__hero__text Una invitacion a sumergirse en la oscuridad y el juego de luces y sonidos que propone el espacio
+                .nave-tv__hero__buttons
+                  button.nave-tv__hero__button.nave-tv__hero__button--yellow.-js-player(data-src="https://www.youtube.com/watch?v=toJI5pNfsm8")
+                    +icon("play", "#000")
+                    |Reproducir
+                  a.nave-tv__hero__button(href="#") Información
+        +slider('nave-tv__hero__thumbnails', 'thumbnail')
+          each episodio in site.data.episodios.ciclo_solos
+            .nave-tv__hero__thumbnail
+              .nave-tv__hero__thumbnail-content
+                h3.nave-tv__hero__thumbnail-subtitle Ciclo de solos
+                h2.nave-tv__hero__thumbnail-title=episodio.titulo
+              img(src=episodio.image)
     section.nave-tv__episodios
-      //- .container
-      //-   .row
-      //-     .col-24
       .nave-tv__episodios__slider-container
         h3.nave-tv__episodios__slider-title Ciclo de Solos
         +slider('nave-tv__episodios__slider', 'multi')
@@ -40,6 +51,11 @@ block content
           each episodio in site.data.episodios.entrevistas
             .nave-tv__episodios__slide
               +article(episodio, '-episodios')
-                
+
+    section.nave-tv__descubre-mas
+      +descubre-mas(site.data.descubreMas)
+
     section.nave-tv__newsletter
       +newsletter('nave-tv')
+
+  +player()

@@ -1,0 +1,35 @@
+include ../_modules/filter/filter
+include ../_modules/article/article
+
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+  main.noticias
+    section.noticias__hero  
+      .container
+        .row
+          .col-24
+            .noticias__hero__container
+              h1.noticias__hero__title Noticias
+    section.noticias__articles
+      .container
+        .row
+          .col-24
+            +filter(site.data.eventos)
+          each evento in [site.data.eventos[1]]
+            .col-24(data-content=evento.categoria)
+              .noticias__articles__destacado
+                +article(evento)
+          each evento, index in site.data.eventos
+            if index != 1
+              .col-24.col-md-8(data-content=evento.categoria)
+                .noticias__articles__list
+                  +article(evento, '-convocatoria')
+          .col-24.col-md-6.offset-md-9
+            .noticias__articles__buttons
+              a.noticias__articles__button(href="/programacion") Cargar más
+                +icon("arrow", "#fff")

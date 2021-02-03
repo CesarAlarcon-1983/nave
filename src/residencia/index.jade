@@ -1,5 +1,6 @@
 include ../_modules/banner/banner
 include ../_modules/items-list/items-list
+include ../_modules/artista-module/artista-module
 
 extends ../_layouts/base
 
@@ -44,12 +45,8 @@ block content
                 li Residencia Virtual
             .residencia__details__content-heading
               p El artista <span>Daniel Marabolí</span> es uno de los 10 Artistas Asociados, lista que corresponde a creadores nacionales que serán apoyados por el espacio de NAVE por un periodo de tres años.
-              .residencia__details__artist
-                .residencia__details__artist-avatar
-                  img(src="/images/convocatorias/convocatoria-1.jpg")
-                .residencia__details__artist-details
-                  .residencia__details__artist-title ARTISTA
-                  .residencia__details__artist-name Daniel Marabolí
+              .residencia__details__artista
+                +artista-module(site.data.artistas[0], "")
 
           .col-24.col-md-18.offset-md-3
             .residencia__details__content

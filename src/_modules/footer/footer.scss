@@ -68,8 +68,9 @@
       }
       a {
         color: $white;
-        font-size: 18px;
+        font-size: 16px;
         text-decoration: none;
+        font-weight: 700;
       }
     }
   }
@@ -115,7 +116,7 @@
 
     a {
       text-decoration: none;
-      font-size: 36px;
+      font-size: 30px;
       color: $white;
     }
   }
@@ -127,7 +128,7 @@
       align-items: center;
 
       svg {
-        @include icon($size: 100px)
+        @include icon($size: 80px)
       }
     }
   }
