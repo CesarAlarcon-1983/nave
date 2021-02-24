@@ -6,26 +6,70 @@ header.nave-tv-header
       .col-24
         .nave-tv-header__container
           a.nave-tv-header__logo(href="/")
-            img(src="/images/logo-tv.svg")
+            img(src="/images/logo-tv.png")
           nav.nave-tv-header__nav
             .nave-tv-header__nav-buttons
               a.nave-tv-header__nav-button(href="#") Hazte Amigo
                 +icon('arrow', '#fff')
-              a.nave-tv-header__nav-button(href="#") Servicios NAVE
+              a.nave-tv-header__nav-button(href="/servicios") Arriendos NAVE
                 +icon('arrow', '#fff')
             ul.nave-tv-header__nav-list
               li.nave-tv-header__nav-item
                 a(href="/quienes-somos") Quienes Somos
-              li.nave-tv-header__nav-item
-                a(href="/proyectos") Proyectos
+                button.nave-tv-header__expand-button
+                ul.nave-tv-header__nav-sublist
+                  //- li.nave-tv-header__nav-subitem 
+                  //-   a(href="/quienes-somos") Quienes Somos
+                  li.nave-tv-header__nav-subitem 
+                    a(href="/mision") Misión
+                  li.nave-tv-header__nav-subitem 
+                    a(href="/lineas-de-trabajo") Líneas de trabajo
+                  li.nave-tv-header__nav-subitem 
+                    a(href="/fundacion") Fundación
               li.nave-tv-header__nav-item
                 a(href="/actividades") Actividades
               li.nave-tv-header__nav-item
                 a(href="/programacion") Programación
+                button.nave-tv-header__expand-button
+                ul.nave-tv-header__nav-sublist
+                  li.nave-tv-header__nav-subitem 
+                    a(href="/todas") Todas las actividades
+                  li.nave-tv-header__nav-subitem 
+                    a(href="/barriales") Actividades barriales
+                  li.nave-tv-header__nav-subitem 
+                    a(href="/co-producciones") Co-producciones
+                  li.nave-tv-header__nav-subitem 
+                    a(href="/ciclos") Ciclos
+                  li.nave-tv-header__nav-subitem
+                    a(href="/seminarios") Seminarios y conservatorios
+                  li.nave-tv-header__nav-subitem 
+                    a(href="/formacion") Formación
               li.nave-tv-header__nav-item
                 a(href="/convocatorias") Convocatorias
+                button.nave-tv-header__expand-button
+                ul.nave-tv-header__nav-sublist
+                  li.nave-tv-header__nav-subitem 
+                    a(href="/llamados") Llamados
+                  li.nave-tv-header__nav-subitem 
+                    a(href="/talleres") Talleres y laboratorios
+                  li.nave-tv-header__nav-subitem 
+                    a(href="/convocatorias-abiertas") Convocatorias abiertas
               li.nave-tv-header__nav-item
                 a(href="/residencias") Residencias
+                button.nave-tv-header__expand-button
+                ul.nave-tv-header__nav-sublist
+                  //- li.nave-tv-header__nav-subitem 
+                  //-   a(href="/residencias") Residencias
+                  li.nave-tv-header__nav-subitem 
+                    a(href="/artistas") Artistas NAVE
+              li.nave-tv-header__nav-item
+                a(href="/tacto") Tacto
+                button.nave-tv-header__expand-button
+                ul.nave-tv-header__nav-sublist
+                  li.nave-tv-header__nav-subitem 
+                    a(href="/tacto#artistas") Artistas
+                  li.nave-tv-header__nav-subitem 
+                    a(href="/tacto#coproductores") Coproductores
               li.nave-tv-header__nav-item
                 a(href="/noticias") Noticias
               li.nave-tv-header__nav-item

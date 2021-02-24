@@ -1,15 +1,22 @@
 include ../icon/icon
 
-mixin filter(options, index)
+mixin filter(options, action = 'filtrar')
   .filter
     .filter__controls
       form.filter__search-button
         input(placeholder='Buscar')
         +icon('arrow', '#000')
-      .filter__select-container
-        select.filter__select
-          option.filter__option(selected hidden disabled) Filtrar por categoría
-          each option, index in options
-            option.filter__option(value=option.index data-target=option.categoria)=option.categoria
-        +icon('arrow', '#fff')
+      .filter__action-container
+        if action === 'filtrar'
+          select.filter__select
+            option.filter__option(selected hidden disabled) Filtar por categoria
+            each option, index in options
+              option.filter__option(value=option.index data-target=option.categoria)=option.categoria
+          +icon('arrow', '#fff')
+        if action === 'ordenar'
+          select.filter__select
+            option.filter__option(selected hidden disabled) Filtrar por orden alfabetico
+              option.filter__option(value='AZ') A - Z
+              option.filter__option(value='ZA') Z - A
+          +icon('arrow', '#fff')
         

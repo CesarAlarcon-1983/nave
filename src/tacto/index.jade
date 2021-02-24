@@ -1,0 +1,119 @@
+include ../_modules/banner/banner
+include ../_modules/article/article
+include ../_modules/artista-module/artista-module
+include ../_modules/artista-page/artista-page
+include ../_modules/coproductor-page/coproductor-page
+
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+  - var titleText = 'Tacto';
+
+block content
+  main.tacto
+    section.tacto__hero
+      img(src="/images/tacto/hero.jpg")
+      .scroll-indicator#artistas
+      .scroll-indicator#coproductores
+
+    section.tacto__content
+      .container
+        .row
+          .col-24
+            .tacto__content__heading
+              .tacto__content__logo
+                img(src="/images/tacto/tacto-logo.png")
+              .tacto__content__tabs
+                .tacto__content__tab(data-target="about") Sobre Tacto
+                .tacto__content__tab(data-target="artistas") Artistas
+                .tacto__content__tab(data-target="coproductores") Coproductores
+      .-divider-container
+        .-divider
+      .tacto__content__wrapper
+        .tacto__content__container(data-content="about")
+          .container
+            .row
+              .col-24.col-md-8
+                h2.tacto__content__title Sobre Tacto
+              .col-24.col-md-16
+                p.tacto__content__main-text TACTO es una plataforma digital de danza contemporánea que reúne a 8 co-productores chilenos, los que se han unido para presentar a 15 artistas nacionales, proponiendo también un espacio de diálogo y reflexión sobre el quehacer de la danza y su programación hoy.
+          .tacto__content__video
+            iframe(src="https://player.vimeo.com/video/452693541")
+          .-divider-container
+            .-divider
+          +banner('Sesiones', "", "#fff")
+          .tacto__content__sesiones
+            .tacto__content__sesion
+              img(src="/images/tacto/sesion-1.jpg")
+            .tacto__content__sesion
+              img(src="/images/tacto/sesion-2.jpg")
+            .tacto__content__sesion
+              img(src="/images/tacto/sesion-3.jpg")
+          .tacto__content__videos
+            .tacto__content__video-container
+              iframe(src="https://player.vimeo.com/video/481824874?title=0&byline=0&portrait=0")
+            .tacto__content__video-container
+              iframe(src="https://player.vimeo.com/video/481829068?title=0&byline=0&portrait=0")
+            .tacto__content__video-container
+              iframe(src="https://player.vimeo.com/video/485860196?title=0&byline=0&portrait=0")
+              
+            //- each sesion, index in site.data.sesiones
+            //-   .tacto__content__sesion-container
+            //-     .tacto__content__container-heading
+            //-       .tacto__content__container-wrapper
+            //-         span.tacto__content__heading-subtitle Sesion #{index + 1}
+            //-         span.tacto__content__heading-title=sesion.titulo
+            //-       .tacto__content__logos
+            //-         .tacto__content__logo
+            //-           img(src="/images/")
+            //-         .tacto__content__logo
+            //-           img(src="/images/")
+            //-     .tacto__content__text-container
+            //-       .tacto__content__text=sesion.texto
+            //-     .tacto__content__images
+            //-       .tacto__content__images-wrapper
+            //-         .tacto__content__image
+            //-           img(src="/images/")
+            //-         .tacto__content__image
+            //-           img(src="/images/")
+            //-         .tacto__content__image
+            //-           img(src="/images/")
+            //-           .tacto__content__date
+            //-             .tacto__content__date-wrapper
+            //-               .tacto__content__day=sesion.fecha.dia
+            //-               span .
+            //-               .tacto__content__day=sesion.fecha.mes
+            //-             .tacto__content__year=sesion.fecha.ano
+            //-         .tacto__content__image.tacto__content__image--big
+            //-           img(src="/images/")
+            //-           .tacto__content__image-hours
+            //-             each hora in sesion.horas
+            //-               .tacto__content__image-hour=hora
+            //-         .tacto__content__image-logo
+            //-             img(src="/images/")
+
+        .tacto__content__container(data-content="artistas")
+          .tacto__content__artistas
+            each artista in site.data.artistasTacto
+              .tacto__content__artista(data-target=artista.nombre)
+                +artista-module(artista, 'tacto')
+        .tacto__content__container(data-content="coproductores")
+          .tacto__content__coproductores-container
+            each coproductor in site.data.coproductores
+              .tacto__content__coproductor(data-target=coproductor.nombre)
+                .tacto__content__images
+                  img.-logo(src=coproductor.image)
+                  img.-gif(src=coproductor.gif)
+                span.tacto__content__coproductor-title=coproductor.nombre
+            
+
+        each artista in site.data.artistasTacto
+          .tacto__content__container(data-content=artista.nombre)
+            +artista-page(artista, site.data.artistasTacto)
+
+        each coproductor in site.data.coproductores
+          .tacto__content__container(data-content=coproductor.nombre)
+            +coproductor-page(coproductor, site.data.coproductores)
+

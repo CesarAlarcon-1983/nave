@@ -1,0 +1,47 @@
+include ../_modules/banner/banner
+include ../_modules/items-list/items-list
+
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+  main.fundacion
+    section.fundacion__hero  
+      .container
+        .row
+          .col-24
+            .fundacion__hero__container
+              h1.fundacion__hero__title Fundación
+    section.fundacion__details
+      .container
+        .row
+          .col-24
+            .fundacion__details__main-text
+              p.fundacion__details__text Fundación Patrimonio Creativo desarrolla su proyecto NAVE como parte de sus políticas de entorno a la valoración del arte. La Fundación busca potenciar el resguardo del patrimonio creativo de las Artes Vivas, incentivando su desarrollo, investigación y formación.
+          .col-24.col-md-12
+            .fundacion__details__image
+              img(src="/images/fundacion/foto1.jpg")
+          .col-24.col-md-12
+            .fundacion__details__text-container
+              p.fundacion__details__text NAVE innova las maneras de relacionar el arte y las sociedad, y otorga a los artista chilenos el derecho a probar, para generar resultados de mayor calidad. Gana el premio de Innovación de la Fundación Chile en 2017 y se clasifica dentro de los 3 finalistas del premio de Innovación Avonni, Mención Cultura, en 2020.
+              p.fundacion__details__text NAVE abre en 2015 en un contexto donde no existe infraestructura pública diseñada para proyectosde residencia e investigación artística, siendo pionero en ofrecer un espacio que no solo se limita a la difusión de obras.
+              p.fundacion__details__text Proporciona recursos especiales, técnicos y humanos a los artistes residentes, para acompañar sus procesos creativos, sin importar la fase de desarrollo en la cual se encuentran, acrecando además al público a la fase más invisible del arte, al permitirle participar del proceso que lleve a la creación de una obra.
+              p.fundacion__details__text NAVE es un laboratorio, donde, al igual que el científico, el artista experimenta junto a las audiencias, a un equipo guiandolo desde sus distintos ámbitos de expertise, y con condiciones profesionales, produciendo un conocimiento relevante para la sociedad.
+              p.fundacion__details__text NAVE ambiciona reducir la precariedad y el empleabilidad de la comunidad artística Chilena que muchas veces está obligada arealizar sus proyectos en espacios no acondicionados para ello, afectando esto en los resultados, generando proyectos de menor calidad y difícilmente exportables.
+    section.fundacion__donaciones
+      .container
+        .row
+          .col-24
+            .fundacion__donaciones__container
+              img(src="/images/emblem-icon.svg")
+              .fundacion__donaciones__heading
+                h3.fundacion__donaciones__title Donaciones
+                span.fundacion__donaciones__subtitle NAVE es un proyecto acogido a la ley de donaciones culturales
+              p.fundacion__donaciones__text Puedes donar en equipamiento, funcionamiento y/o actividades culturales artísticas, o directamente con nosotros aquí.
+              .fundacion__donaciones__button-container
+                a.fundacion__donaciones__button(href="#") Donar
+                  +icon('arrow', '#fff')
+

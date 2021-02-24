@@ -1,7 +1,7 @@
 [
   {
-    "nombre": "Daniel Maribolí",
-    "avatar": "/images/convocatorias/convocatoria-1.jpg",
+    "nombre": "Georgina Del Campo",
+    "avatar": "/images/artistas/artista-1.jpg",
     "residencias": [
       {
         "categoria": "Residencia Virtual",
@@ -12,8 +12,8 @@
     ]
   },  
   {
-    "nombre": "Pepo Urrea Silva",
-    "avatar": "/images/convocatorias/convocatoria-1.jpg",
+    "nombre": "Maria Court & Trinidad Piriz",
+    "avatar": "/images/artistas/artista-2.jpg",
         "residencias": [
       {
         "categoria": "Residencia Virtual",
@@ -22,11 +22,22 @@
         "image": "/images/programacion/art-1.jpg"
       }
     ]
-
+  },
+  {
+    "nombre": "Pepa Urrea Silva",
+    "avatar": "/images/artistas/artista-3.jpg",
+        "residencias": [
+      {
+        "categoria": "Residencia Virtual",
+        "fecha": "Septiembre a noviembre 2020",
+        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
+        "image": "/images/programacion/art-1.jpg"
+      }
+    ]
   },
   {
     "nombre": "Pepa Ubera",
-    "avatar": "/images/convocatorias/convocatoria-1.jpg",
+    "avatar": "/images/artistas/artista-4.jpg",
         "residencias": [
       {
         "categoria": "Residencia Virtual",
@@ -35,37 +46,10 @@
         "image": "/images/programacion/art-1.jpg"
       }
     ]
-
-  },
-  {
-    "nombre": "Jose Luis Vidal",
-    "avatar": "/images/convocatorias/convocatoria-1.jpg",
-        "residencias": [
-      {
-        "categoria": "Residencia Virtual",
-        "fecha": "Septiembre a noviembre 2020",
-        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
-        "image": "/images/programacion/art-1.jpg"
-      }
-    ]
-
-  },
-  {
-    "nombre": "Bolgeri + Marin",
-    "avatar": "/images/convocatorias/convocatoria-1.jpg",
-        "residencias": [
-      {
-        "categoria": "Residencia Virtual",
-        "fecha": "Septiembre a noviembre 2020",
-        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
-        "image": "/images/programacion/art-1.jpg"
-      }
-    ]
-
   },
   {
     "nombre": "Call Your Mom",
-    "avatar": "/images/convocatorias/convocatoria-1.jpg",
+    "avatar": "/images/artistas/artista-5.jpg",
         "residencias": [
       {
         "categoria": "Residencia Virtual",
@@ -74,6 +58,137 @@
         "image": "/images/programacion/art-1.jpg"
       }
     ]
-
+  },
+  {
+    "nombre": "José luis Vidal",
+    "avatar": "/images/artistas/artista-6.jpg",
+        "residencias": [
+      {
+        "categoria": "Residencia Virtual",
+        "fecha": "Septiembre a noviembre 2020",
+        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
+        "image": "/images/programacion/art-1.jpg"
+      }
+    ]
+  },
+  {
+    "nombre": "Bolgeri + Marin",
+    "avatar": "/images/artistas/artista-7.jpg",
+        "residencias": [
+      {
+        "categoria": "Residencia Virtual",
+        "fecha": "Septiembre a noviembre 2020",
+        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
+        "image": "/images/programacion/art-1.jpg"
+      }
+    ]
+  },
+  {
+    "nombre": "Raúl Hott",
+    "avatar": "/images/artistas/artista-8.jpg",
+        "residencias": [
+      {
+        "categoria": "Residencia Virtual",
+        "fecha": "Septiembre a noviembre 2020",
+        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
+        "image": "/images/programacion/art-1.jpg"
+      }
+    ]
+  },
+  {
+    "nombre": "Azkona & Toloza",
+    "avatar": "/images/artistas/artista-9.jpg",
+        "residencias": [
+      {
+        "categoria": "Residencia Virtual",
+        "fecha": "Septiembre a noviembre 2020",
+        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
+        "image": "/images/programacion/art-1.jpg"
+      }
+    ]
+  },
+  {
+    "nombre": "Lia Rodriguez",
+    "avatar": "/images/artistas/artista-10.jpg",
+        "residencias": [
+      {
+        "categoria": "Residencia Virtual",
+        "fecha": "Septiembre a noviembre 2020",
+        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
+        "image": "/images/programacion/art-1.jpg"
+      }
+    ]
+  },
+  {
+    "nombre": "Coinspirantes",
+    "avatar": "/images/artistas/artista-11.jpg",
+        "residencias": [
+      {
+        "categoria": "Residencia Virtual",
+        "fecha": "Septiembre a noviembre 2020",
+        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
+        "image": "/images/programacion/art-1.jpg"
+      }
+    ]
+  },
+  {
+    "nombre": "Jorge Bolpe & Daniela Pritzke",
+    "avatar": "/images/artistas/artista-12.jpg",
+        "residencias": [
+      {
+        "categoria": "Residencia Virtual",
+        "fecha": "Septiembre a noviembre 2020",
+        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
+        "image": "/images/programacion/art-1.jpg"
+      }
+    ]
+  },
+  {
+    "nombre": "Georgina Del Campo",
+    "avatar": "/images/artistas/artista-1.jpg",
+    "residencias": [
+      {
+        "categoria": "Residencia Virtual",
+        "fechas": "Septiembre a noviembre 2020",
+        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
+        "image": "/images/programacion/art-1.jpg"
+      }
+    ]
+  },  
+  {
+    "nombre": "Maria Court & Trinidad Piriz",
+    "avatar": "/images/artistas/artista-2.jpg",
+        "residencias": [
+      {
+        "categoria": "Residencia Virtual",
+        "fecha": "Septiembre a noviembre 2020",
+        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
+        "image": "/images/programacion/art-1.jpg"
+      }
+    ]
+  },
+  {
+    "nombre": "Pepa Urrea Silva",
+    "avatar": "/images/artistas/artista-3.jpg",
+        "residencias": [
+      {
+        "categoria": "Residencia Virtual",
+        "fecha": "Septiembre a noviembre 2020",
+        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
+        "image": "/images/programacion/art-1.jpg"
+      }
+    ]
+  },
+  {
+    "nombre": "Pepa Ubera",
+    "avatar": "/images/artistas/artista-4.jpg",
+        "residencias": [
+      {
+        "categoria": "Residencia Virtual",
+        "fecha": "Septiembre a noviembre 2020",
+        "titulo": "Residencia Virtual: Escuadrón remix, bitácora sonora",
+        "image": "/images/programacion/art-1.jpg"
+      }
+    ]
   }
 ]

@@ -54,6 +54,6 @@ block content
       +banner("Otros Artistas", "#000")
       .artista__otros-artistas__container
         each artista, index in site.data.artistas
-          if index != 0
+          if index != 0 && index < 6
             .artista__otros-artistas__wrapper
               +artista-module(artista)

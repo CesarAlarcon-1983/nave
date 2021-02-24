@@ -10,7 +10,33 @@ var Header = function() {
   var closePlayer = $('.player__close-button');
   var playerIframe = $('.-js-iframe');
   var playerOverlay = $('.player__overlay');
-  var contentWrapper = $('.proyectos__content__wrapper');
+  var contentWrapper = $('.tacto__content__wrapper');
+  var tactoHash = window.location.hash;
+  var targets = $('[data-target]');
+  var contents = $('[data-content]');
+  var artistasTarget = targets.filter(function() {
+    return $(this).data('target') == 'artistas';
+  })
+  var artistasContent = contents.filter(function() {
+    return $(this).data('content') == 'artistas';
+  })
+
+  var coproductoresTarget = targets.filter(function() {
+    return $(this).data('target') == 'coproductores';
+  })
+  var coproductoresContent = contents.filter(function() {
+    return $(this).data('content') == 'coproductores';
+  })
+
+  if(tactoHash == '#artistas') {
+    artistasContent.addClass('-active');
+    artistasTarget.addClass('-active');
+  }
+
+  if(tactoHash == '#coproductores') {
+    coproductoresContent.addClass('-active');
+    coproductoresTarget.addClass('-active');
+  }
 
   menuOpen.on('click', function() {
     header.toggleClass('-open');
@@ -24,6 +50,7 @@ var Header = function() {
       header.removeClass('-scrolled');
     }
   })
+
 
   openPlayer.on('click', function() {
     var videoUrl = $(this).data('src');
@@ -60,11 +87,10 @@ var Header = function() {
     $(playerIframe).removeAttr('src');
   })
 
-  var targets = $('[data-target]');
-  var contents = $('[data-content]');
-
-  $(targets[0]).addClass('-active');
-  $(contents[0]).addClass('-active');
+  if(!tactoHash) {
+    $(targets[0]).addClass('-active');
+    $(contents[0]).addClass('-active');
+  }
 
   contentWrapper.height($(contents[0]).height());
 

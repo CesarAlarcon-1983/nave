@@ -170,6 +170,7 @@
 
     &__wrapper {
       width: 100%;
+      cursor: pointer;
 
       @include mq(md) {
         width: calc(25% - 15px);

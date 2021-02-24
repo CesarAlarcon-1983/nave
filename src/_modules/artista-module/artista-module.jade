@@ -1,8 +1,11 @@
 mixin artista-module(data, klass)
   if klass == 'tacto'
     .artista-module(class=klass)
-      .artista-module__avatar
-        img(src=data.avatar)
+      .artista-module__images
+        .artista-module__avatar
+          img(src=data.avatar)
+        .artista-module__gif
+          img(src=data.gif)
       .artista-module__details
         .artista-module__title ARTISTA
         .artista-module__name=data.nombre

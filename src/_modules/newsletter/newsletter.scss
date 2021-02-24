@@ -22,6 +22,11 @@
     border: 1px solid $black;
     font-size: 20px;
     font-family: $altFont;
+    width: 70%;
+
+    @include mq(md) {
+      width: auto;
+    }
 
     .icon {
       margin-left: 10px;
@@ -52,6 +57,32 @@
 
     @include mq(md) {
       font-size: 60px;
+    }
+  }
+
+  &__mail-group {
+    width: 100%;
+    
+    @include mq(md) {
+      height: 52px;
+      display: flex;
+      width: auto;
+    }
+
+    input {
+      border: 1px solid $black;
+      display: block;
+      background: $white;
+      padding: 0 20px;
+      font-family: $altFont;
+      width: 70%;
+      height: 52px;
+      outline: none;
+
+      @include mq(md) {
+        width: 300px;
+        height: 100%;
+      }
     }
   }
 
@@ -115,6 +146,13 @@
         font-size: 80px;
       }
     }
+
+    #{$n}__mail-group {
+      input {
+        border: 1px solid $white;
+      }
+    }
+
 
     img {
       width: 70px;

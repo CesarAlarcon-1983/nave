@@ -3,12 +3,12 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 500 162.94" style="enable-background:new 0 0 500 162.94;" xml:space="preserve">
 <style type="text/css">
-	.st0{opacity:0.9;}
-	.st1{clip-path:url(#SVGID_2_);fill:#7D7873;}
-	.st2{fill:#CAC8C6;}
-	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#A29F9C;}
-	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#8A8481;}
-	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#E4E3E2;}
+	.st0{stroke:white;stroke-width:5px}
+	.st1{clip-path:url(#SVGID_2_);fill:none;stroke:teal;stroke-width:5px}
+	.st2{fill:none;stroke:white;stroke-width:5px}
+	.st3{fill:none;stroke:red;stroke-width:5px}
+	.st4{fill:none;stroke:blue;stroke-width:5px}
+	.st5{fill:none;stroke:green;stroke-width:5px}
 	.st6{fill:#F6CB02;}
 </style>
 <g class="st0">
@@ -17,7 +17,7 @@
 			<rect id="SVGID_1_" x="79.33" y="81.47" width="79.48" height="81.47"/>
 		</defs>
 		<clipPath id="SVGID_2_">
-			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+			<use xlink:href="#SVGID_1_" style="overflow:visible;"/>
 		</clipPath>
 		<rect x="79.33" y="81.47" class="st1" width="79.48" height="81.47"/>
 	</g>

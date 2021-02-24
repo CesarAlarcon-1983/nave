@@ -1,0 +1,9 @@
+mixin coproductor-module(data)
+  .coproductor-module(class=klass)
+    .coproductor-module__images
+      .coproductor-module__logo
+        img(src=data.image)
+      .coproductor-module__gif
+        img(src=data.gif)
+    .coproductor-module__details
+      .coproductor-module__name=data.nombre

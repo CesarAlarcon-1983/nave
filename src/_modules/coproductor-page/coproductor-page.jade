@@ -1,0 +1,58 @@
+include ../coproductor-module/coproductor-module
+include ../banner/banner
+
+mixin coproductor-page(data, coproductores)
+  .coproductor-page
+    .coproductor-page__container
+      .coproductor-page__coproductor-wrapper
+        .coproductor-page__coproductor-image
+          iframe(src=data.video)
+          //- .coproductor-page__social
+          //-   .coproductor-page__social-title Compartir
+          //-   ul.coproductor-page__social-list
+          //-     li.coproductor-page__social-item
+          //-       a(href="")
+          //-         i.fa.fa-facebook
+          //-     li.coproductor-page__social-item
+          //-       a(href="")
+          //-         i.fa.fa-twitter
+        .coproductor-page__coproductor-bio
+          .coproductor-page__coproductor-name=data.nombre
+          if data.texto
+            each paragraph in data.texto
+              p.coproductor-page__coproductor-text=paragraph
+          if data.texto_pre_lista
+            each paragraph in data.texto_pre_lista
+              p.coproductor-page__coproductor-text=paragraph
+          if data.lista
+            ul.coproductor-page__list
+              each item in data.lista
+                li.coproductor-page__list-item=item
+          if data.texto_post_lista
+            each paragraph in data.texto_post_lista
+              p.coproductor-page__coproductor-text=paragraph
+      //- .coproductor-page__details-wrapper
+      //-   .coproductor-page__details-group
+      //-     .coproductor-page__details-title Apoyado por
+      //-     .coproductor-page__details-logo
+      //-       img(src="/images/logo-simple.png")
+      //-   .coproductor-page__details-group
+      //-     .coproductor-page__details-title Etiquetas
+      //-     ul.coproductor-page__details-tags
+      //-       each etiqueta in data.etiquetas
+      //-         li.coproductor-page__details-tag=etiqueta
+      //-   .coproductor-page__details-group
+      //-     .coproductor-page__details-title Proceso
+      //-     ul.coproductor-page__details-procesos
+      //-       each proceso in data.procesos
+      //-         li.coproductor-page__details-proceso=proceso
+
+    .coproductor-page__otros-coproductores
+      +banner('otros coproductores', '', '#fff')
+      .coproductor-page__otros-coproductores__container
+        each coproductor, index in coproductores
+          if index < 4
+            .coproductor-page__otros-coproductores__wrapper(data-target=coproductor.nombre)
+              +coproductor-module(coproductor, 'tacto')
+    //- .-divider-container-coproductores
+    //-   .-divider-coproductores

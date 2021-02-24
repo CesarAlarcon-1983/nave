@@ -1,0 +1,30 @@
+include ../_modules/filter/filter
+include ../_modules/artista-module/artista-module
+
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+  main.artistas
+    section.artistas__hero  
+      .container
+        .row
+          .col-24
+            .artistas__hero__container
+              h1.artistas__hero__title Artistas
+    section.artistas__list
+      .container
+        .row
+          .col-24
+            +filter(site.data.artistas, 'ordenar')
+          each artista, index in site.data.artistas
+            .col-24.col-md-6(data-content=artista.nombre)
+                +artista-module(artista)
+          .col-24.col-md-4.offset-md-10
+            .artistas__list__buttons
+              a.artistas__list__button(href="/artista") Cargar más
+                +icon("arrow", "#fff")
+

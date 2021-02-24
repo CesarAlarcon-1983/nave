@@ -1,5 +1,12 @@
-.quienes-somos {
+.quienes-somos,
+.mision,
+.fundacion {
   background: $lightestGray;
+  margin-top: 60px;
+
+  @include mq(md) {
+    margin-top: 0;
+  }
 
   &__hero {
     background: url('/images/quienes-somos/hero.jpg') no-repeat center center / cover;
@@ -33,38 +40,72 @@
   }
 
   &__details {
-    padding: 50px 0;
+    padding-top: 50px;
 
-    &__content {
-      margin-bottom: 40px;
+    @include mq(md) {
+      padding-top: 100px;
+    }
+
+    &__main-text {
+      margin-bottom: 50px;
+
       @include mq(md) {
-        display: flex;
+        margin-bottom: 100px;
+      }
+
+      p {
+        font-family: $altFont;
+        font-weight: 500;
+        font-size: 20px;
+        width: 100%;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        margin: 0;
+  
+        @include mq(md) {
+          font-size: 34px;
+          width: 75%;
+        }
       }
     }
 
     &__image {
       width: 100%;
-      margin-bottom: 20px;
+      height: 0;
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 80%;
+      margin-bottom: 50px;
 
       @include mq(md) {
-        width: 45%;
-        margin-bottom: 0;
+        padding-bottom: 65%;
+        margin-bottom: 100px;
+      }
+
+      &--margin {
+        margin-bottom: 30px;
+
+        @include mq(md) {
+          margin-bottom: 100px;
+        }
       }
 
       img {
         width: 100%;
-
-        @include mq(md) {
-          width: 80%;
-        }
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
       }
     }
 
     &__text-container {
       width: 100%;
+      margin-bottom: 50px;
 
       @include mq(md) {
-        width: 55%;
+        margin-bottom: 100px;
       }
     }
 
@@ -75,9 +116,28 @@
       font-size: 16px;
       margin: 0;
       margin-bottom: 20px;
+      font-weight: 300;
+
+      @include mq(md) {
+        margin-bottom: 0;
+      }
+
+      &:not(:last-child) {
+        @include mq(md) {
+          margin-bottom: 20px;
+        }
+      }
 
       @include mq(md) {
         font-size: 18px;
+      }
+    }
+
+    &__destacado {
+      margin-bottom: 50px;
+
+      @include mq(md) {
+        margin-bottom: 100px;
       }
     }
 
@@ -87,6 +147,7 @@
       letter-spacing: 2px;
       font-weight: 500;
       font-size: 20px;
+      text-align: center;
 
       @include mq(md) {
         font-size: 30px;
@@ -138,3 +199,153 @@
     }
   }
 }
+
+.mision {
+  &__hero {
+    background: url('/images/mision/hero.jpg') no-repeat center center / cover;
+  }
+}
+
+.fundacion {
+  &__hero {
+    background: url('/images/fundacion/hero.jpg') no-repeat center center / cover;
+
+    &__title {
+      font-size: 30px;
+
+      @include mq(md) {
+        font-size: 110px;
+      }
+    }
+  }
+
+  &__details {
+    &__text-container {
+      margin-bottom: 0;
+    }
+
+    &__image {
+      overflow: visible;
+      width: 100%;
+      padding-bottom: 0;
+      min-height: 100vw;      
+      overflow: hidden;
+
+      @include mq(md) {
+        min-height: 100%;
+        width: 90%;
+        margin-right: auto;
+      }
+
+      img {
+        position: relative;
+        height: auto;
+        width: 100%;
+
+        @include mq(md) {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__donaciones {
+    padding: 50px 0;
+    position: relative;
+
+    @include mq(md) {
+      padding: 100px 0;
+    }
+
+    img {
+      position: absolute;
+      bottom: 20px;
+      right: 35px;
+      width: 50px;
+
+      @include mq(md) {
+        bottom: auto;
+        top: 40px;
+        right: 40px;
+        width: 70px;
+      }
+    }
+
+    &__container {
+      background: $white;
+      padding: 20px;
+
+      @include mq(md) {
+        padding: 40px;
+      }
+    }
+
+    &__heading {
+      margin-bottom: 20px;
+
+      @include mq(md) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__title {
+      margin: 0;
+      font-size: 26px;
+      text-transform: uppercase;
+      font-family: $heroTitleFont;
+      line-height: .7;
+      margin-bottom: 5px;
+
+      @include mq(md) {
+        font-size: 60px;
+      }
+    }
+
+    &__subtitle {
+      margin: 0;
+      font-size: 24px;
+      text-transform: uppercase;
+
+      @include mq(md) {
+        font-size: 40px;
+      }
+    }
+
+    &__text {
+      font-size: 18px;
+      font-family: $altFont;
+      width: 85%;
+      margin: 0;
+      margin-bottom: 20px;
+
+      @include mq(md) {
+        margin-bottom: 40px;
+        width: 65%;
+        font-size: 20px;
+      }
+    }
+
+    &__button {
+      display: inline-flex;
+      justify-content: center;
+      padding: 5px 10px 5px 20px;
+      background: $black;
+      align-items: center;
+      color: $white;
+      text-decoration: none;
+      border: 1px solid $black;
+      font-size: 20px;
+      font-family: $altFont;
+
+      .icon {
+        margin-left: 60px;
+  
+        svg {
+          @include icon(30px, 'rightup')
+        }
+      }
+    }
+  }
+}
+
