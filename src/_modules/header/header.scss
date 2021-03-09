@@ -103,6 +103,11 @@
         font-family: $altFont;
         font-weight: 700;
 
+        &:hover {
+            color: $white - #111;
+            background: $yellow - #111;
+        }
+
         @include mq(md) {
             margin-left: 15px;
             margin-bottom: 0;
@@ -201,7 +206,6 @@
         right: 5px;
         top: 5px;
         transform: rotate(45deg);
-        transform-origin: center;
         border: none;
         border-right: 2px solid $white;
         border-bottom: 2px solid $white;
@@ -215,7 +219,6 @@
 
     &__nav-sublist {
         @include trans;
-        // opacity: 0;
         background: $black;
         pointer-events: none;
         overflow: hidden;

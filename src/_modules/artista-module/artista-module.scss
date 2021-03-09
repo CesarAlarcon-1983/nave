@@ -44,6 +44,8 @@
   &__name {
     font-family: $altFont;
     font-size: 18px;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
   }
 
   &.tacto {

@@ -20,23 +20,12 @@ var Header = function() {
   var artistasContent = contents.filter(function() {
     return $(this).data('content') == 'artistas';
   })
-
   var coproductoresTarget = targets.filter(function() {
     return $(this).data('target') == 'coproductores';
   })
   var coproductoresContent = contents.filter(function() {
     return $(this).data('content') == 'coproductores';
   })
-
-  if(tactoHash == '#artistas') {
-    artistasContent.addClass('-active');
-    artistasTarget.addClass('-active');
-  }
-
-  if(tactoHash == '#coproductores') {
-    coproductoresContent.addClass('-active');
-    coproductoresTarget.addClass('-active');
-  }
 
   menuOpen.on('click', function() {
     header.toggleClass('-open');
@@ -92,7 +81,25 @@ var Header = function() {
     $(contents[0]).addClass('-active');
   }
 
-  contentWrapper.height($(contents[0]).height());
+  console.log(tactoHash)
+  if(tactoHash == '') {
+    contentWrapper.height($(contents[0]).height());
+  }
+  
+  if(tactoHash == '#artistas') {
+    console.log(artistasContent.height());
+    contentWrapper.height(artistasContent.height());
+    header.addClass('-scrolled');
+    artistasContent.addClass('-active');
+    artistasTarget.addClass('-active');
+  }
+
+  if(tactoHash == '#coproductores') {
+    contentWrapper.height(coproductoresContent.height());
+    header.addClass('-scrolled');
+    coproductoresContent.addClass('-active');
+    coproductoresTarget.addClass('-active');
+  }
 
   targets.on('click', function() {
     targets.removeClass('-active')
@@ -103,9 +110,14 @@ var Header = function() {
       return $(this).data('content') == target;
     })
 
+
     $(this).addClass('-active');
-    targettedContent.addClass('-active');
     contentWrapper.height(targettedContent.height());
+
+    targettedContent.addClass('-active');
+
+    console.log('target', target)
+    console.log('targetted content', targettedContent)
 
     if(window.innerWidth > 720) {
       $('html, body').animate({

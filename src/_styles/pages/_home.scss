@@ -1,4 +1,6 @@
 .home {
+  $h:&;
+
   background: $lightestGray;
 
   &__hero {
@@ -72,6 +74,32 @@
       padding-top: 15vh;
       position: relative;
       height: 100%;
+
+      &--light {
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: linear-gradient(to bottom right, #000, transparent);
+          opacity: .7;
+          z-index: 1;
+        }
+      }
+
+      &--dark {
+        #{$h}__hero__title {
+          color: $black;
+          -webkit-text-stroke: 2px $black;
+          mix-blend-mode: normal;
+        }
+
+        #{$h}__hero__descripcion {
+          color: $black;
+        }
+      }
     }
 
     &__slide-img {
@@ -101,7 +129,9 @@
       background-clip: text;
       -webkit-text-fill-color: transparent;
       background: url('/images/transparent.png') repeat center center;
-      
+      z-index: 2;
+      position: relative;
+
       @include mq(md) {
         padding-left: 10px;
         font-size: 110px;
@@ -115,6 +145,7 @@
       margin: 0;
       display: inline-block;
       position: relative;
+      z-index: 2;
 
       @include mq(md) {
         font-size: 80px;
@@ -136,6 +167,8 @@
       font-size: 20px;
       margin-top: 40px;
       font-weight: 700;
+      z-index: 2;
+      position: relative;
 
       @include mq(md) {
         position: absolute;

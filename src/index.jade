@@ -11,7 +11,7 @@ block content
   main.home
     section.home__hero
       +slider('home__hero__slider', 'normal')
-        .home__hero__slide
+        .home__hero__slide.home__hero__slide
           .home__hero__slide-img
             img(src="/images/home/hero.jpg")
           .container
@@ -29,9 +29,26 @@ block content
                   a(href="#").home__hero__button Comprar entradas
                       +icon("arrow", "#fff")
 
-        .home__hero__slide
+        .home__hero__slide.home__hero__slide--dark
           .home__hero__slide-img
-            img(src="/images/home/hero.jpg")
+            img(src="/images/noticias/noticia-1.jpg")
+          .container
+            .row
+              .col-24
+                .home__hero__slide-container
+                  h1.home__hero__title  
+                    | Lorem
+                    br
+                    | Ipsum
+                  .home__hero__descripcion
+                    |Encuentro de solos
+                    br
+                    | NAVE-sala de máquinas
+                  a(href="#").home__hero__button Comprar entradas
+                      +icon("arrow", "#fff")
+        .home__hero__slide.home__hero__slide--light
+          .home__hero__slide-img
+            img(src="/images/noticias/noticia-1.jpg")
           .container
             .row
               .col-24

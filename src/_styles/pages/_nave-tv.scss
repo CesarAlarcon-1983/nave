@@ -23,7 +23,7 @@
       position: absolute;
       right: 50px;
       transform: translateY(-50%);
-      top: 45%;
+      bottom: 400px;
       height: 50px;
       z-index: 2000;
       justify-content: space-between;
@@ -32,7 +32,7 @@
       @include mq(md) {
         display: flex;
       }
-  
+      
       .-js-arrow-next {
         background: url('/images/arrow-right.svg') no-repeat center center / cover;
         width: 50px;

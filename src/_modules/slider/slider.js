@@ -41,7 +41,7 @@ var Slider = function() {
     if(slider) {
         slider.each(function(){
             $(this).slick({
-                dots: false,
+                dots: true,
                 fade: true,
                 arrows:  true,
                 autoplay: false,
